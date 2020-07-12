@@ -1,2 +1,5 @@
-this is a test
-hello world
+git init
+git init
+git add .
+git pull
+git push
