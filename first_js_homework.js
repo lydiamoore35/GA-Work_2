@@ -46,9 +46,13 @@ while (i < 20) {
 	letters += "A";
 	i++;
 }
-//As long as 'i' is less than 20, add 1 to the value of "A" for each loop.
-//The curly braces closes the loop and the loop will run until 'i' is >= 20.
+
 console.log(letters);
+
+// //As long as 'i' is less than 20, add 1 to the value of "A" for each loop.
+// //The curly braces closes the loop and the loop will run until 'i' is >= 20.
+//I would expect the result to be 20 A's int he console.
+//I see, so there are acutally 21 A's because I forgot tht it starts at 0.
 
 //Section 4 - The main difference as I'm understanding it is that you would use a While Loop when you don't know how many times you want to loop through ahead of time. A For Loop would be used if we already know how many times we want to loop throuhg something.
 //The first part of the control panel is the intial statement.
@@ -59,7 +63,7 @@ for (let i = 0; i <= 999){
     console.log("numbers 0 to 999")
 }
 
-//bonus challenge - I think the backslash\ will make additional quotes possible/readable in a string, so that you can write 'Jimmy\'s ball went far' without the string being interrupted by the additional apostrophe. 
+//bonus challenge - I think the backslash\ will make additional quotes possible/readable in a string, so that you can write 'Jimmy\'s ball went far' without the string being interrupted by the additional apostrophe. Is it also true that if you use "" with a ' inside, that that will also work since you are using a double and then single quotes? 
 
 for (let i = 99; i >= 0; i--){
     console.log("counting down from 999")
@@ -69,7 +73,7 @@ for (let i = 1; i <= 10; i++){
     console.log("sending" + "a" + "message")
 }
 
-//Iteration - 
+// //Iteration - 
 const StarWars = ["Han", "C3PO", "R2D2", "Luke", "Leia", "Anakin"];
     console.log(Han[0])
     console.log(C3PO[1])
