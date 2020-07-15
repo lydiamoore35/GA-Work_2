@@ -1,5 +1,5 @@
 //DRY stands for Don't Repeat Yourself. We should pay attention to this because can write what would be hundreds of lines of code in just a few lines and keep our code succinct. We have larned about loops to perform repetative tasks like this. 
-//let and const are local or block scoped and var is global unless specified in a function. var can be updated and re-delcared within its scope and let can be updated but not re-declared. const can neither be updated nor re-delcared. 
+//let and const are local or block specific and var is global unless specified in a function. var can be updated and re-delcared within its scope and let can be updated but not re-declared. const can neither be updated nor re-delcared. 
 
 const a = 4;
 const b = 53;
@@ -36,7 +36,7 @@ g == 10
 //When I write '10=g' I get a SyntaxError that says invalid left-hand side in assignment.
 
 //Yes, this is an infiite loop becuase the expression would never become false and the loop would not end.
-//If I'm understanding this loop correctly, it would never acutally start...
+//If I'm understanding this loop correctly, it says run while runProgram variable is true. And then I beleive after the console message the variable is being reset to false. I spent a bit of time researching this one so I hope its correct!
 
 let letters = "A";
 //set 'letters' to equal "A"
@@ -47,7 +47,7 @@ while (i < 20) {
 	i++;
 }
 //As long as 'i' is less than 20, add 1 to the value of "A" for each loop.
-//the curly braces closes the loop and the loop will run until 'i' is >= 20.
+//The curly braces closes the loop and the loop will run until 'i' is >= 20.
 console.log(letters);
 
 //Section 4 - The main difference as I'm understanding it is that you would use a While Loop when you don't know how many times you want to loop through ahead of time. A For Loop would be used if we already know how many times we want to loop throuhg something.
