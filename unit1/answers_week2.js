@@ -116,14 +116,21 @@
 
 /////WHERE IS WALDO////////
 
-const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
-                    ["Lucinda", "Jacc", "Neff", "Snoop"],
-                    ["Petunia", ["Baked Goods", "Waldo"]]];
+// const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
+//                     ["Lucinda", "Jacc", "Neff", "Snoop"],
+//                     ["Petunia", ["Baked Goods", "Waldo"]]];
         
-whereIsWaldo.splice(1,1);
-console.log(whereIsWaldo);
+// whereIsWaldo.splice(1,1);
+// console.log(whereIsWaldo);
 
-whereIsWaldo[1][2] = "No One"
-console.log(whereIsWaldo);
+// whereIsWaldo[1][2] = "No One"
+// console.log(whereIsWaldo);
 
-console.log(whereIsWaldo[2][1][1]);
+// console.log(whereIsWaldo[2][1][1]);
+
+///////FIND THE MEDIAN///////
+
+const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+
+nums.sort()
+console.log(nums[Math.floor(nums.length/2)])
