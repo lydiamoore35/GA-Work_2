@@ -73,7 +73,57 @@
 
 ///////YELL AT THE NINJA TURTLES////////
 
-const ninjaTurtles = ["Donatello" , "Leonardo" , "Raphael" , "Michaelangelo"];
-for (UpperCase of ninjaTurtles){
-    console.log(UpperCase);
-}
+// const ninjaTurtles = ["Donatello" , "Leonardo" , "Raphael" , "Michaelangelo"];
+// for (UpperCase of ninjaTurtles){
+//     console.log(UpperCase);
+// }
+
+///////METHODS, REVISITED///////////
+
+// const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
+// // console.log([8]);
+
+// favMovies.sort();
+// console.log(favMovies);
+
+// favMovies.pop();
+// console.log(favMovies);
+
+// favMovies.push("Guardians of the Galaxy");
+// console.log(favMovies);
+
+// favMovies.reverse();
+// console.log(favMovies);
+
+// favMovies.shift();
+// console.log(favMovies);
+
+// favMovies.unshift("Beetlejuice"); //nothing unless I add a movie title in ()
+// console.log(favMovies);
+
+// console.log(favMovies[3]);
+
+// favMovies.splice(3, 1, "Avatar");
+// console.log(favMovies);
+
+// const halfMovies = favMovies.slice(favMovies.indexOf(favMovies[favMovies.length / 2]));
+// console.log(favMovies);
+
+////come back to //////
+
+///my notes - slice does not change an original array - array.slice(from, until)
+///my notes - splice adds or removes elements and DOES change the array
+
+/////WHERE IS WALDO////////
+
+const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
+                    ["Lucinda", "Jacc", "Neff", "Snoop"],
+                    ["Petunia", ["Baked Goods", "Waldo"]]];
+        
+whereIsWaldo.splice(1,1);
+console.log(whereIsWaldo);
+
+whereIsWaldo[1][2] = "No One"
+console.log(whereIsWaldo);
+
+console.log(whereIsWaldo[2][1][1]);
