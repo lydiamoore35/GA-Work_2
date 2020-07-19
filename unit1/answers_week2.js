@@ -35,17 +35,15 @@
 
 ////EXCITED KITTEN////////
 
-// const kittenResponse = ["...human...why you taking pictures of me?..." , "...the catnip made me do it..." , "...why does the red dot always get away..."]
-// let meow = 0;
-// kittenResponse[meow];
-// for (let i = 0; i <= 20; i++){
-//     if(i % 2 === 0){
-//         return kittenResponse[Math.floor(Math.random()*kittenResponse.length)];
-//         console.log(meow)
-//     }else{console.log("love me, pet me! HSSSSS!")}
+const kittenResponse = ["...human...why you taking pictures of me?..." , "...the catnip made me do it..." , "...why does the red dot always get away..."]
+let meow = 0;
+kittenResponse[meow];
+for (let i = 0; i <= 20; i++){
+    if(i % 2 === 0){
+        console.log(kittenResponse[Math.floor(Math.random()*kittenResponse.length)])
+    }else{console.log("love me, pet me! HSSSSS!")}
 
-// }
-////////COME BACK TOO
+}
 
 
 //////WILD WILD LIFE///////
@@ -130,7 +128,7 @@
 
 ///////FIND THE MEDIAN///////
 
-const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+// const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
 
-nums.sort()
-console.log(nums[Math.floor(nums.length/2)])
+// nums.sort()
+// console.log(nums[Math.floor(nums.length/2)])
