@@ -35,15 +35,15 @@
 
 ////EXCITED KITTEN////////
 
-const kittenResponse = ["...human...why you taking pictures of me?..." , "...the catnip made me do it..." , "...why does the red dot always get away..."]
-let meow = 0;
-kittenResponse[meow];
-for (let i = 0; i <= 20; i++){
-    if(i % 2 === 0){
-        console.log(kittenResponse[Math.floor(Math.random()*kittenResponse.length)])
-    }else{console.log("love me, pet me! HSSSSS!")}
+// const kittenResponse = ["...human...why you taking pictures of me?..." , "...the catnip made me do it..." , "...why does the red dot always get away..."]
+// let meow = 0;
+// kittenResponse[meow];
+// for (let i = 0; i <= 20; i++){
+//     if(i % 2 === 0){
+//         console.log(kittenResponse[Math.floor(Math.random()*kittenResponse.length)])
+//     }else{console.log("love me, pet me! HSSSSS!")}
 
-}
+// }
 
 
 //////WILD WILD LIFE///////
