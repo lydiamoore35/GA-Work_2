@@ -32,7 +32,6 @@
 //     }
 //     }
 
-
 ////EXCITED KITTEN////////
 
 // const kittenResponse = ["...human...why you taking pictures of me?..." , "...the catnip made me do it..." , "...why does the red dot always get away..."]
@@ -44,7 +43,6 @@
 //     }else{console.log("love me, pet me! HSSSSS!")}
 
 // }
-
 
 //////WILD WILD LIFE///////
 
@@ -78,36 +76,38 @@
 
 ///////METHODS, REVISITED///////////
 
-// const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
-// // console.log([8]);
+const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
+console.log(favMovies[8]);
 
-// favMovies.sort();
-// console.log(favMovies);
+favMovies.sort();
+console.log(favMovies);
 
-// favMovies.pop();
-// console.log(favMovies);
+favMovies.pop();
+console.log(favMovies);
 
-// favMovies.push("Guardians of the Galaxy");
-// console.log(favMovies);
+favMovies.push("Guardians of the Galaxy");
+console.log(favMovies);
 
-// favMovies.reverse();
-// console.log(favMovies);
+favMovies.reverse();
+console.log(favMovies);
 
-// favMovies.shift();
-// console.log(favMovies);
+favMovies.shift();
+console.log(favMovies);
 
-// favMovies.unshift("Beetlejuice"); //nothing unless I add a movie title in ()
-// console.log(favMovies);
+favMovies.unshift("Beetlejuice"); //nothing unless I add a movie title in ()
+console.log(favMovies);
 
-// console.log(favMovies[3]);
+console.log(favMovies[3]);
 
-// favMovies.splice(3, 1, "Avatar");
-// console.log(favMovies);
+favMovies.splice(3, 1, "Avatar");
+console.log(favMovies);
 
-// const halfMovies = favMovies.slice(favMovies.indexOf(favMovies[favMovies.length / 2]));
-// console.log(favMovies);
+const sliceMovies = (favMovies.slice(Math.floor(favMovies.length/2)));
+console.log(sliceMovies);
 
-////come back to //////
+console.log(favMovies[19])
+
+//undefined for "Fast and Furious"
 
 ///my notes - slice does not change an original array - array.slice(from, until)
 ///my notes - splice adds or removes elements and DOES change the array
