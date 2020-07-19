@@ -45,28 +45,35 @@
 //     }else{console.log("love me, pet me! HSSSSS!")}
 
 // }
-// //////COME BACK TOO
+////////COME BACK TOO
 
 
 //////WILD WILD LIFE///////
 
-const wolfy = ["Wolfy", "wolf", 16, "Yukon Territory"]
-const sharky = ["Sharky", "shark", 20, "Left Coast"]
-const plantee = ["Plantee", "plant",  5000 , "Mordor"]
-const porgee = ["Porgee", "Porg", 186, "Ahch-To"]
-const dart = ["D'Art" , "Demogorgan Dog", 2, "Upside Down"]
+// const wolfy = ["Wolfy", "wolf", 16, "Yukon Territory"]
+// const sharky = ["Sharky", "shark", 20, "Left Coast"]
+// const plantee = ["Plantee", "plant",  5000 , "Mordor"]
+// const porgee = ["Porgee", "Porg", 186, "Ahch-To"]
+// const dart = ["D'Art" , "Demogorgan Dog", 2, "Upside Down"]
 
-plantee[2] = 5001;
-console.log(plantee);
+// plantee[2] = 5001;
+// console.log(plantee);
 
-wolfy[3] = "Gotham City";
-console.log(wolfy);
+// wolfy[3] = "Gotham City";
+// console.log(wolfy);
 
-dart.push("Hawkins");
-console.log(dart);
+// dart.push("Hawkins");
+// console.log(dart);
 
-wolfy.shift();
-console.log(wolfy); //removed
+// wolfy.shift();
+// console.log(wolfy); //removed
 
-wolfy.unshift("Gameboy");
-console.log(wolfy);
+// wolfy.unshift("Gameboy");
+// console.log(wolfy);  //replaced with new name
+
+///////YELL AT THE NINJA TURTLES////////
+
+const ninjaTurtles = ["Donatello" , "Leonardo" , "Raphael" , "Michaelangelo"];
+for (UpperCase of ninjaTurtles){
+    console.log(UpperCase);
+}
