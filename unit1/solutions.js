@@ -42,14 +42,15 @@ const checkPrime = (num) => {
     }
     checkPrime(5);
 }
+//i want to create a function called printPrime that will show all prime numbers up to some random limit
+//this function should use or call on the function above in order to complete this task
 const printPrimes = (num) => {
     for(let i = 0; i <= Math.sqrt(num); i++) {
-        if(num % i === 0) {
-            return false; {
-            }
+        console.log(printPrimes(95));
         }
-    }console.log(printPrimes(95));
-}
+    
+//I'm not getting the result I want on this one but not sure why? 
+
 
 /////Rock Paper Scissors////////
 //create a function to get a random move
