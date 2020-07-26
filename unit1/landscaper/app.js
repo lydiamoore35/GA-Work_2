@@ -9,5 +9,12 @@ const currentTool = {
 }
 
 //I will use a prompt to ask if you would like to cut grass
-yourAnswer = prompt("Would you like to cut grass for $1?");
-    console.log(yourAnswer)
+yourAnswer = prompt("Would you like to cut grass for $1?" , "Yes/No");
+    if(yourAnswer == "Yes"){
+        console.log("Thank you!");
+    }else if (yourAnswer == "No"){
+        console.log("No problem, maybe next time.");
+    }else{
+        console.log("Something went wrong")
+    }
+
