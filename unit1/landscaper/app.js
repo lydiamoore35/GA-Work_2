@@ -52,7 +52,15 @@ const cutGrassBy = [
 ];
 let money = 0;
 let wallet = 0;
-    const startCutting = () => {
+const keepCutting = () => {
+    userUpdateScissors = prompt("Would you like to earn " +cutGrassBy[1].reward + " dollars cutting grass with " + cutGrassBy[1].tool + "?" , "Yes/No")
+        if(userUpdateScissors == "Yes" && wallet < 25){
+            wallet += 5;
+            alert("You just earned " + cutGrassBy[1].reward + " dollars! You now have " + wallet + " dollars in your wallet. Keep going!!" );
+            keepCutting();
+        }
+}    
+const startCutting = () => {
         //for(i = 0; i < 5; i++){
             money = cutGrassBy[0].reward;
             wallet = (wallet + money);
@@ -67,22 +75,22 @@ let wallet = 0;
                      let userUpdate = prompt("Would you like to purchase a pair of " + cutGrassBy[1].tool + "?", "Yes/No");
             if(userUpdate == "Yes"){
                 wallet -= 5;
-                alert("we're good so far")
+                alert("You have " + wallet + " dollars in your wallet and a lovely pair of rusty scissors, BUT now you can make more $ cutting with scissors!")
             }else if(userUpdate == "No"){
                 alert("Ok, keep cutting grass with your teeth, weirdo.")
-
             } 
+            keepCutting();
                 }else{console.log("Something went wrong")}
             console.log(money); }
+            
 
     //i need to put this in a for loop to conitnue until money is greater than $5 or maybe i need to put the above function into a for loop??
     //i put this in a for loop so that it would ask the   
     // const useScissors = () => {
     //     for(i = 0; i < 25; i++){//i need to stop this loop once the wallet reaches $25 to prompt purchasing a push lawnmower
-    //         let wallet = 0 + cutGrassBy[1].reward;//i need to get this to accumulate the money earned?????? fudge!!! this is so awesomely frustrating!!!
+    //         let wallet = 0 + cutGrassBy[1].reward;
     //         let money = cutGrassBy[1].reward;
     //             alert("You just earned " + cutGrassBy[1].reward + " dollar. Great job! You now have " + money + " dollar(s) in your wallet.")
-    //         console.log(money);
     //     } }   
     
     //i need to create another prompt listing the amount of money currently in wallet and then when they have at least $5 to have a follow up prompt asking if they would like to purchase a pair of rusty scissors
