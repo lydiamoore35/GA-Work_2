@@ -1,5 +1,6 @@
 ////LANDSCAPER////
 
+////pseudo code////
 //you can spend the day cutting lawns and make $1 dollar
 //to do this, you will be using your teeth, initially
 //feel free to do this multiple times 
@@ -18,72 +19,79 @@
 //once they reach 500 dollars they can hire a team
     //they will earn 250 dollars using a team
     //once they reach 1000 dollars to the wallet - "You've won!"
+   
 
+//i will use an array of objects to list the tool, cost, and earned amount of money
 
-const currentTool = ["teeth" , "rusty scissors" , "push lawnmower" + "battery-powered lawnmower" + "hire a team"]
+const cutGrassBy = [
+    {
+        tool: "teeth",
+        cost: 0,
+        reward: 1,
+    },
+    {
+        tool: "rusty scissors",
+        cost: 5,
+        reward: 5,
+    },
+    {
+        tool: "push lawnmower",
+        cost: 25,
+        reward: 50,
+    },
+    {
+        tool: "battery-powered lawnmower",
+        cost: 250,
+        reward: 100,
+    },
+    {
+        tool: "hire a team",
+        cost: 500,
+        reward: 250,
+    }
+];
+let money = 0;
+let wallet = 0;
+    const startCutting = () => {
+        //for(i = 0; i < 5; i++){
+            money = cutGrassBy[0].reward;
+            wallet = (wallet + money);
+                startAnswer = prompt("Would you like to earn $1 by cutting grass with your teeth?" , "Yes/No");
+                if(startAnswer == "Yes" && wallet < 5){
+                    alert("You just earned " + cutGrassBy[0].reward + " dollar. Great job! You now have " + wallet + " dollar(s) in your wallet.")
+                    startCutting();
+                }else if(startAnswer == "No"){
+                    alert("Lazy Bones!");
+                    startCutting();
+                }else if(wallet >= 5){
+                     let userUpdate = prompt("Would you like to purchase a pair of " + cutGrassBy[1].tool + "?", "Yes/No");
+            if(userUpdate == "Yes"){
+                wallet -= 5;
+                alert("we're good so far")
+            }else if(userUpdate == "No"){
+                alert("Ok, keep cutting grass with your teeth, weirdo.")
 
-const 
+            } 
+                }else{console.log("Something went wrong")}
+            console.log(money); }
 
-let currentWallet = 0;
-let start = () => {
-    alert("You are using " + currentTool[0] + " and have $" + currentWallet);
-}
-for(let currentWallet = 0; currentWallet <= 5; currentWallet++){
-    yourAnswer = prompt("Would you like to cut grass with your teeth for $1?" , "Yes/No");
-        if(yourAnswer == "Yes"){
-                console.log(start());
-            }else if(yourAnswer == "No"){
-                userMoney;
-                console.log("Lazy bones!")
-            }else{
-                console.log("Something went wrong")
-    }}
-const userMoney = () => {
-    currentWallet++;
-
-}
-
-for(let currentWallet = 5; currentWallet >= 5; currentWallet++){
-    yourAnswer = prompt("Would you like to cut grass using rusty scissors? This will cost you $5 and you will also earn $5!" , "Yes/No");
-        if(yourAnswer == "Yes"){
-                console.log(start());
-            }else if(yourAnswer == "No"){
-                userMoney;
-                console.log("Lazy bones!")
-            }else{
-                console.log("Something went wrong")
-    }}
-
-for(let currentWallet = 5; currentWallet <= 5; currentWallet++){
-    yourAnswer = prompt("Would you like to cut grass using a push lawnmower? This will cost you $25. You will earn $50!" , "Yes/No");
-        if(yourAnswer == "Yes"){
-                console.log(start());
-            }else if(yourAnswer == "No"){
-                userMoney;
-                console.log("Lazy bones!")
-            }else{
-                console.log("Something went wrong")
-    }}
+    //i need to put this in a for loop to conitnue until money is greater than $5 or maybe i need to put the above function into a for loop??
+    //i put this in a for loop so that it would ask the   
+    // const useScissors = () => {
+    //     for(i = 0; i < 25; i++){//i need to stop this loop once the wallet reaches $25 to prompt purchasing a push lawnmower
+    //         let wallet = 0 + cutGrassBy[1].reward;//i need to get this to accumulate the money earned?????? fudge!!! this is so awesomely frustrating!!!
+    //         let money = cutGrassBy[1].reward;
+    //             alert("You just earned " + cutGrassBy[1].reward + " dollar. Great job! You now have " + money + " dollar(s) in your wallet.")
+    //         console.log(money);
+    //     } }   
     
-for(let currentWallet = 5; currentWallet <= 5; currentWallet++){
-    yourAnswer = prompt("Would you like to cut grass using a batter-powered lawnmower? This will cost you $250. You will earn $100!" , "Yes/No");
-        if(yourAnswer == "Yes"){
-                console.log(start());
-            }else if(yourAnswer == "No"){
-                userMoney;
-                console.log("Lazy bones!")
-            }else{
-                console.log("Something went wrong")
-    }}
+    //i need to create another prompt listing the amount of money currently in wallet and then when they have at least $5 to have a follow up prompt asking if they would like to purchase a pair of rusty scissors
+    //this needs to be condtioned based on if there is enough money in the wallet
+      
 
-for(let currentWallet = 5; currentWallet <= 5; currentWallet++){
-    yourAnswer = prompt("Would you like hire a team to cut grass? This will cost you $500. You will earn $250!" , "Yes/No");
-        if(yourAnswer == "Yes"){
-                console.log(start());
-            }else if(yourAnswer == "No"){
-                userMoney;
-                console.log("Lazy bones!")
-            }else{
-                console.log("Something went wrong")
-    }}
-//////ok this is what I have before I completely refractor after looking at what you added to the slack tech channel//////     
+
+    //i will write a function that will ask for the user's input
+    // userInput = () => {
+
+    // }
+    startCutting();
