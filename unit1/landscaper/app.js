@@ -57,9 +57,12 @@ const keepCutting = () => {
         if(userUpdateScissors == "Yes" && wallet < 25){
             wallet += 5;
             alert("You just earned " + cutGrassBy[1].reward + " dollars! You now have " + wallet + " dollars in your wallet. Keep going!!" );
-            keepCutting();
+        }else if(userUpdateScissors == "No"){
+            alert("Ok, keep cutting grass with your teeth, weirdo.");
         }
-}    
+        keepCutting();
+    }  
+
 const startCutting = () => {
         //for(i = 0; i < 5; i++){
             money = cutGrassBy[0].reward;
@@ -83,21 +86,9 @@ const startCutting = () => {
                 }else{console.log("Something went wrong")}
             console.log(money); }
             
-
-    //i need to put this in a for loop to conitnue until money is greater than $5 or maybe i need to put the above function into a for loop??
-    //i put this in a for loop so that it would ask the   
-    // const useScissors = () => {
-    //     for(i = 0; i < 25; i++){//i need to stop this loop once the wallet reaches $25 to prompt purchasing a push lawnmower
-    //         let wallet = 0 + cutGrassBy[1].reward;
-    //         let money = cutGrassBy[1].reward;
-    //             alert("You just earned " + cutGrassBy[1].reward + " dollar. Great job! You now have " + money + " dollar(s) in your wallet.")
-    //     } }   
     
     //i need to create another prompt listing the amount of money currently in wallet and then when they have at least $5 to have a follow up prompt asking if they would like to purchase a pair of rusty scissors
-    //this needs to be condtioned based on if there is enough money in the wallet
-      
-
-
+    //this needs to be condtioned based on if there is enough money in the wallet 
     //i will write a function that will ask for the user's input
     // userInput = () => {
 
