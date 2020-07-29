@@ -96,31 +96,109 @@ const cutGrassBy = [
 ];
 
 let money = 0;
-let wallet = 0;          
+let wallet = 0; 
+
+const cutUsingBatteryMower = () =>{
+    if(wallet < 250){
+        const useBatteryMower = prompt("Would you like to earn " + cutGrassBy[3].reward + " dollars by cutting grass with your " + cutGrassBy[3].tool + "?" , "Yes/No")
+            if(useBatteryMower === "Yes"){
+                wallet +=100;
+                alert("You just earned " + cutGrassBy[3].reward + " dollar. Great job! You now have " + wallet + " dollar(s) in your wallet.")
+                cutUsingBatteryMower();
+            }else if(useBatteryMower === "No"){
+                alert("Lazy Bones!")
+                cutUsingBatteryMower();
+            }     
+       }else if(wallet >= 500){
+       const useBatteryMower2 = prompt("Would you like to " + cutGrassBy[4].tool + "?", "Yes/No")
+           if(useBatteryMower2 === "Yes"){
+               wallet -=500;
+               alert("You have " + wallet + " dollars in your wallet and an awesome team of starving students, BUT now you can make " + cutGrassBy[4].reward + " per lawn!")
+               cutUsingBatteryMower();
+       }else if(usePushMower2 === "No"){
+           alert("Ok, keep cutting grass yourself, weirdo.")
+           cutUsingPushMower(); 
+
+       }
+   }    
+}
+
+const cutUsingPushMower = () =>{
+    if(wallet < 250){
+        const usePushMower = prompt("Would you like to earn " + cutGrassBy[2].reward + " dollars by cutting grass with your " + cutGrassBy[2].tool + "?" , "Yes/No")
+            if(usePushMower === "Yes"){
+                wallet +=50;
+                alert("You just earned " + cutGrassBy[2].reward + " dollar. Great job! You now have " + wallet + " dollar(s) in your wallet.")
+                cutUsingPushMower();
+            }else if(usePushMower === "No"){
+                alert("Lazy Bones!")
+                cutUsingPushMower();
+            }     
+       }else if(wallet >= 250){
+       const usePushMower2 = prompt("Would you like to purchase a " + cutGrassBy[3].tool + "?", "Yes/No")
+           if(usePushMower2 === "Yes"){
+               wallet -=250;
+               alert("You have " + wallet + " dollars in your wallet and an awesome push mower, BUT now you can make " + cutGrassBy[3].reward + " per lawn!")
+               cutUsingBatteryMower();
+       }else if(usePushMower2 === "No"){
+           alert("Ok, keep cutting grass with your crapy scissors, weirdo.")
+           cutUsingPushMower(); 
+
+       }
+   }    
+}
+
+const cutUsingScissors = () =>{
+     if(wallet < 25){
+         const useScissors2 = prompt("Would you like to earn " + cutGrassBy[1].reward + " dollars by cutting grass with your " + cutGrassBy[1].tool + "?" , "Yes/No")
+             if(useScissors2 === "Yes"){
+                 wallet +=5;
+                 alert("You just earned " + cutGrassBy[1].reward + " dollar. Great job! You now have " + wallet + " dollar(s) in your wallet.")
+                 cutUsingScissors();
+             }else if(useScissors2 === "No"){
+                 alert("Lazy Bones!")
+                 cutUsingScissors();
+             }     
+        }else if(wallet >= 25){
+        const usePushMower = prompt("Would you like to purchase a " + cutGrassBy[2].tool + "?", "Yes/No")
+            if(usePushMower === "Yes"){
+                wallet -=25;
+                alert("You have " + wallet + " dollars in your wallet and an awesome push mower, BUT now you can make " + cutGrassBy[2].reward + " per lawn!")
+                cutUsingPushMower();
+        }else if(usePushMower === "No"){
+            alert("Ok, keep cutting grass with your crapy scissors, weirdo.")
+            cutUsingScissors(); 
+
+        }
+    }    
+}
+
     const startCutting = () => {
         if(wallet < 5){
             const useTeeth = prompt("Would you like to earn " + cutGrassBy[0].reward + " by cutting grass with your " + cutGrassBy[0].tool + "?" , "Yes/No")
                 if(useTeeth === "Yes"){
                     wallet++;
                     alert("You just earned " + cutGrassBy[0].reward + " dollar. Great job! You now have " + wallet + " dollar(s) in your wallet.")
+                    startCutting();
                 }else if(useTeeth === "No"){
                     alert("Lazy Bones!")
                     startCutting();
-            }   
-        else if(wallet >= 5){
+            }
+        }else if(wallet >= 5){
             const useScissors = prompt("Would you like to purchase a pair of " + cutGrassBy[1].tool + "?", "Yes/No")
             if(useScissors === "Yes"){
-                wallet =-5;
+                wallet -=5;
                 alert("You have " + wallet + " dollars in your wallet and a lovely pair of rusty scissors, BUT now you can make more $ cutting with scissors!")
+                cutUsingScissors();
         }else if(useScissors === "No"){
             alert("Ok, keep cutting grass with your teeth, weirdo.")
             startCutting(); 
         
-        }//cutUsingScissors();
+            }
         }
     }
-}
-    
+
+startCutting();    
 
 
 //i need to create another prompt listing the amount of money currently in wallet and then when they have at least $5 to have a follow up prompt asking if they would like to purchase a pair of rusty scissors
