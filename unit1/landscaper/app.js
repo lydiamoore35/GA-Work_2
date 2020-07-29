@@ -156,10 +156,27 @@ let money = 0
 wallet = (wallet + money);
 
 for(i = 0; i < 5; i++){
-    startAnswer = prompt("Would you like to earn " + cutGrassBy[0].reward + " dollar(s) cutting grass with your " + cutGrassBy[0].tool + "?" , "Yes/No");
+   startAnswer = prompt("Would you like to earn " + cutGrassBy[0].reward + " dollar(s) cutting grass with your " + cutGrassBy[0].tool + "?" , "Yes/No");{
         if(startAnswer === "Yes" && money < 5){
             wallet += 1;
-            alert("You just earned " + cutGrassBy[0].reward + " dollar. Great job! You now have " + wallet + " dollar(s) in your wallet.")
+            alert("You just earned " + cutGrassBy[0].reward + " dollar. Great job! You now have " + wallet + " dollar(s) in your wallet.");
+            if(startAnswer === "No");
+                    alert("Ok, keep cutting grass with your teeth, weirdo.");
+                if(startAnswer === "Yes" && money === 5){
+                        buyScissors = prompt("Would you like to purchase a pair of " + cutGrassBy[1].tool + "?", "Yes/No");
+                    if(buyScissors === "Yes");{
+                            wallet -= 5;
+                            alert("You have " + wallet + " dollars in your wallet and a lovely pair of rusty scissors, BUT now you can make more $ cutting with scissors!");
+                }
+            }
+        }
     }
 }     
+//these do not work in if else statements. The prompt for "no" populates even when i do not respond no for user input. Why? 
+
+for(i = 0; i < 25; i++){
     
+}  
+  
+
+  
