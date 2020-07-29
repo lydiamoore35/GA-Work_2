@@ -23,40 +23,11 @@
 
 //i will use an array of objects to list the tool, cost, and earned amount of money
 
-// const cutGrassBy = [
-//     {
-//         tool: "teeth",
-//         cost: 0,
-//         reward: 1,
-//     },
-//     {
-//         tool: "rusty scissors",
-//         cost: 5,
-//         reward: 5,
-//     },
-//     {
-//         tool: "push lawnmower",
-//         cost: 25,
-//         reward: 50,
-//     },
-//     {
-//         tool: "battery-powered lawnmower",
-//         cost: 250,
-//         reward: 100,
-//     },
-//     {
-//         tool: "hire a team",
-//         cost: 500,
-//         reward: 250,
-//     }
-// ];
+
 // //user needs to be able to purchase tool
 // //need to prompt the user 25 dollar push mower 
 // //user needs to be able to landscape and earn money
 // //user needs to be able to purchase next tool
-
-// let money = 0;
-// let wallet = 0;
 
 // const usePushMower = () => {
 //     if(money >= 25){
@@ -92,91 +63,120 @@
 //         usePushMower();   
 //         }
 // }    
-   
-// const startCutting = () => {
-//     money = cutGrassBy[0].reward;
-//     wallet = (wallet + money);
-//         startAnswer = prompt("Would you like to earn $1 by cutting grass with your teeth?" , "Yes/No");
-//         if(startAnswer == "Yes" && wallet < 5){
-//             alert("You just earned " + cutGrassBy[0].reward + " dollar. Great job! You now have " + wallet + " dollar(s) in your wallet.")
-//             startCutting();
-//         }else if(startAnswer == "No"){
-//             alert("Lazy Bones!");
-//             startCutting();
-//         }else if(wallet >= 5){
-//                 let userUpdate = prompt("Would you like to purchase a pair of " + cutGrassBy[1].tool + "?", "Yes/No");
-//         if(userUpdate == "Yes"){
-//             wallet -= 5;
-//             alert("You have " + wallet + " dollars in your wallet and a lovely pair of rusty scissors, BUT now you can make more $ cutting with scissors!")
-//         }else if(userUpdate == "No"){
-//             alert("Ok, keep cutting grass with your teeth, weirdo.")
-//         } 
-//         keepCutting();   
-//     } 
-// }  
-// startCutting();
-// }   
-    //i need to create another prompt listing the amount of money currently in wallet and then when they have at least $5 to have a follow up prompt asking if they would like to purchase a pair of rusty scissors
+
+////Landscaper Part III - I WILL GET THIS!!!!!////
+////sorry i need all the pseudo code out of my way, even though it's green it's just really hard for me to focus on my code with it mixed in.
+
+const cutGrassBy = [
+    {
+        tool: "teeth",
+        cost: 0,
+        reward: 1,
+    },
+    {
+        tool: "rusty scissors",
+        cost: 5,
+        reward: 5,
+    },
+    {
+        tool: "push lawnmower",
+        cost: 25,
+        reward: 50,
+    },
+    {
+        tool: "battery-powered lawnmower",
+        cost: 250,
+        reward: 100,
+    },
+    {
+        tool: "hire a team",
+        cost: 500,
+        reward: 250,
+    }
+];
+
+let money = 0;
+let wallet = 0;          
+    const startCutting = () => {
+        if(wallet < 5){
+            const useTeeth = prompt("Would you like to earn " + cutGrassBy[0].reward + " by cutting grass with your " + cutGrassBy[0].tool + "?" , "Yes/No")
+                if(useTeeth === "Yes"){
+                    wallet++;
+                    alert("You just earned " + cutGrassBy[0].reward + " dollar. Great job! You now have " + wallet + " dollar(s) in your wallet.")
+                }else if(useTeeth === "No"){
+                    alert("Lazy Bones!")
+                    startCutting();
+            }   
+        else if(wallet >= 5){
+            const useScissors = prompt("Would you like to purchase a pair of " + cutGrassBy[1].tool + "?", "Yes/No")
+            if(useScissors === "Yes"){
+                wallet =-5;
+                alert("You have " + wallet + " dollars in your wallet and a lovely pair of rusty scissors, BUT now you can make more $ cutting with scissors!")
+        }else if(useScissors === "No"){
+            alert("Ok, keep cutting grass with your teeth, weirdo.")
+            startCutting(); 
+        
+        }//cutUsingScissors();
+        }
+    }
+}
+    
+
+
+//i need to create another prompt listing the amount of money currently in wallet and then when they have at least $5 to have a follow up prompt asking if they would like to purchase a pair of rusty scissors
     //this needs to be condtioned based on if there is enough money in the wallet 
     //i will write a function that will ask for the user's input
 
     ////Landscaper Part II////
 
-    const cutGrassBy = [
-        {
-            tool: "teeth",
-            cost: 0,
-            reward: 1,
-        },
-        {
-            tool: "rusty scissors",
-            cost: 5,
-            reward: 5,
-        },
-        {
-            tool: "push lawnmower",
-            cost: 25,
-            reward: 50,
-        },
-        {
-            tool: "battery-powered lawnmower",
-            cost: 250,
-            reward: 100,
-        },
-        {
-            tool: "hire a team",
-            cost: 500,
-            reward: 250,
-        }
-    ];
+//     const cutGrassBy = [
+//         {
+//             tool: "teeth",
+//             cost: 0,
+//             reward: 1,
+//         },
+//         {
+//             tool: "rusty scissors",
+//             cost: 5,
+//             reward: 5,
+//         },
+//         {
+//             tool: "push lawnmower",
+//             cost: 25,
+//             reward: 50,
+//         },
+//         {
+//             tool: "battery-powered lawnmower",
+//             cost: 250,
+//             reward: 100,
+//         },
+//         {
+//             tool: "hire a team",
+//             cost: 500,
+//             reward: 250,
+//         }
+//     ];
     
-let wallet = 0
-let money = 0
-//money = cutGrassBy[0].reward;
-wallet = (wallet + money);
+// let wallet = 0
+// let money = 0
+// //money = cutGrassBy[0].reward;
+// wallet = (wallet + money);
 
-for(i = 0; i < 5; i++){
-   startAnswer = prompt("Would you like to earn " + cutGrassBy[0].reward + " dollar(s) cutting grass with your " + cutGrassBy[0].tool + "?" , "Yes/No");{
-        if(startAnswer === "Yes" && money < 5){
-            wallet += 1;
-            alert("You just earned " + cutGrassBy[0].reward + " dollar. Great job! You now have " + wallet + " dollar(s) in your wallet.");
-            if(startAnswer === "No");
-                    alert("Ok, keep cutting grass with your teeth, weirdo.");
-                if(startAnswer === "Yes" && money === 5){
-                        buyScissors = prompt("Would you like to purchase a pair of " + cutGrassBy[1].tool + "?", "Yes/No");
-                    if(buyScissors === "Yes");{
-                            wallet -= 5;
-                            alert("You have " + wallet + " dollars in your wallet and a lovely pair of rusty scissors, BUT now you can make more $ cutting with scissors!");
-                }
-            }
-        }
-    }
-}     
-//these do not work in if else statements. The prompt for "no" populates even when i do not respond no for user input. Why? 
+// for(i = 0; i < 25; i++){
+//    let startAnswer = prompt("Would you like to earn " + cutGrassBy[0].reward + " dollar(s) cutting grass with your " + cutGrassBy[0].tool + "?" , "Yes/No");
+//         if(startAnswer === "Yes"){
+//             wallet += 1;
+//             alert("You just earned " + cutGrassBy[0].reward + " dollar. Great job! You now have " + wallet + " dollar(s) in your wallet.");
+//             if(startAnswer === )
+//         }else if(startAnswer === "No");
+//                 alert("Ok, keep cutting grass with your teeth, weirdo.");
+//                 //cutWithTeeth();
+//         }            
+                    // }if(startAnswer === "Yes" && wallet === 5){
+                //         buyScissors = prompt("Would you like to purchase a pair of " + cutGrassBy[1].tool + "?", "Yes/No");
+                //     }else(buyScissors === "Yes");{
+                //             wallet -= 5;
+                //             alert("You have " + wallet + " dollars in your wallet and a lovely pair of rusty scissors, BUT now you can make more $ cutting with scissors!");
+                // }     
 
-for(i = 0; i < 25; i++){
-    
-}  
-  
-
-  
+            //these do not work in if else statements. The prompt for "no" populates even when i do not respond no for user input. Why?
