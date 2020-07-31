@@ -98,8 +98,24 @@ const cutGrassBy = [
 let money = 0;
 let wallet = 0; 
 
+const cutUsingTeam = () =>{
+    if(wallet < 1000){
+        const useTeam = prompt("Would you like to earn " + cutGrassBy[4].reward + " dollars by cutting grass with " + cutGrassBy[4].tool + "?" , "Yes/No")
+            if(useTeam === "Yes"){
+                wallet +=250;
+                alert("You just earned " + cutGrassBy[4].reward + " dollar. Great job! You now have " + wallet + " dollar(s) in your wallet.")
+                cutUsingTeam();
+            }else if(useTeam === "No"){
+                alert("Lazy Bones!")
+                cutUsingTeam();
+            }     
+       }else if(wallet >= 1000){
+       alert("You won the game!!!")
+       }
+   } 
+
 const cutUsingBatteryMower = () =>{
-    if(wallet < 250){
+    if(wallet < 500){
         const useBatteryMower = prompt("Would you like to earn " + cutGrassBy[3].reward + " dollars by cutting grass with your " + cutGrassBy[3].tool + "?" , "Yes/No")
             if(useBatteryMower === "Yes"){
                 wallet +=100;
@@ -114,10 +130,10 @@ const cutUsingBatteryMower = () =>{
            if(useBatteryMower2 === "Yes"){
                wallet -=500;
                alert("You have " + wallet + " dollars in your wallet and an awesome team of starving students, BUT now you can make " + cutGrassBy[4].reward + " per lawn!")
-               cutUsingBatteryMower();
+               cutUsingTeam();
        }else if(usePushMower2 === "No"){
            alert("Ok, keep cutting grass yourself, weirdo.")
-           cutUsingPushMower(); 
+           cutUsingBatteryMower(); 
 
        }
    }    
