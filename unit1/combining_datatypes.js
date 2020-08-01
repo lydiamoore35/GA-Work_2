@@ -53,4 +53,17 @@ const powerButton = () => {
         options() => {"select a song"}
     }
 }
-powerButton();options()
+console.log(powerButton()options())
+
+//come back too
+vendingMachine = {
+    snacks = [{
+        chips: "1 dollar",
+        candy: "2 dollars",
+        soda: "3 dollars"
+    }],
+    const vend = (num) => {
+        return vendingMachine.snacks[num];
+    }
+}
+console.log(vendingMachine.vend([2]))

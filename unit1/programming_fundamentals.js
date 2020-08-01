@@ -52,5 +52,4 @@ const f = l => {
 //Answer with comments//
 //It makes more semantic sense to change f2 to 'find'
 //the way that f2 is setup makes more sense to me to work from and add to.
-//Thew semi-colon is necessary b/c without it you get 'Invalid left-hand side in assignment' and the code will not run.
-
+//The semi-colon is necessary b/c without it you get 'Invalid left-hand side in assignment' and the code will not run.
