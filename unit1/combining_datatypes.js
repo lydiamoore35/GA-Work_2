@@ -47,16 +47,17 @@ const crayonSelector = () => {
 }
 console.log(crayonSelector().crayons[2]);
 
-//come back to and need to use concole.log 
+
 const powerButton = () => {
-    return {
-        options() => {"select a song"}
-    }
+    return options() 
 }
-console.log(powerButton()options())
+const options = () => {
+    console.log("select a song")
+}
+powerButton()
 
 //come back too
-vendingMachine = {
+const vendingMachine = {
     snacks = [{
         chips: "1 dollar",
         candy: "2 dollars",
