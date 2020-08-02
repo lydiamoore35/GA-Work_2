@@ -35,7 +35,7 @@ const knit = () => {
     return {
         item: "scarf",
         size: "6 feet",
-        value: "30 dollars"
+        price: "30 dollars"
     }
 }
 console.log(knit().item);
@@ -56,15 +56,15 @@ const options = () => {
 }
 powerButton()
 
-//come back too
-const vendingMachine = {
-    snacks = [{
-        chips: "1 dollar",
-        candy: "2 dollars",
-        soda: "3 dollars"
-    }],
-    const vend = (num) => {
-        return vendingMachine.snacks[num];
-    }
-}
-console.log(vendingMachine.vend([2]))
+// //come back too
+// const vendingMachine = {
+//     snacks = [{
+//         chips: "1 dollar",
+//         candy: "2 dollars",
+//         soda: "3 dollars"
+//     }],
+//     const vend = (num) => {
+//         return vendingMachine.snacks[num];
+//     }
+// }
+// console.log(vendingMachine.vend([2]))

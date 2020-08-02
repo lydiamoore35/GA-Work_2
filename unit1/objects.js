@@ -1,7 +1,7 @@
 ////Hampster////
 class Hamster {
     constructor (owner, name, price){
-    this.owner = name;
+    this.owner = owner;
     this.name = name;
     this.price = price;
 }
@@ -23,26 +23,26 @@ Pet.getPrice();
 
 ////Person////
 class Person {
-    constructor(name, age, height, weight, mood, hamster, bankAccount){
+    constructor(name, age, height, weight, mood, hamsters, bankAccount){
         this.name = name;
         this.age = 0;
         this.height = 0;
         this.weight = 0;
         this.mood = 0;
-        this.hamster = [];
+        this.hamsters = [];
         this.bankAccount = 0;
     }
     getName(){
         return this.name;
     }
     getAge(){
-        return this.age;
+        console.log(this.age);
     }
     getWeight(){
-        return this.weight;
+        console.log(this.weight);
     }
     greet(){
-        console.log("Amy");
+        console.log("Timmy");
     }
     eat(){
         this.weight++;
@@ -56,19 +56,48 @@ class Person {
         this.height++;
         this.weight++;
         this.mood--;
-        this.bankAccount+10;
+        this.bankAccount += 10;
     }
     buyHamster(hamster){
-        this.hamster.push[Hamster];
-        this.mood++;
-        getPrice(this.price)
+        this.hamsters.push(hamster);
+        this.mood += 10;
+        this.bankAccount -= hamster.getPrice();
     }
 }
-getName();
-getAge();
-getWeight();
-greet();
-eat();
-exercise();
-ageUp();
-buyHamster();
+const timmy = new Person("Timmy");
+for(let i = 0; i < 5; i++){
+    timmy.ageUp();
+}
+for(let i = 0; i < 9; i++){
+    timmy.ageUp();
+}
+for(let i = 0; i < 15; i++){
+    timmy.ageUp();
+}
+timmy.getAge()
+for(let i = 0; i < 5; i++){
+    timmy.eat();
+}
+timmy.eat();
+timmy.eat();
+for(let i = 0; i < 5; i++){
+    timmy.exercise();
+}
+timmy.exercise();
+timmy.exercise();
+
+const Pet2 = new Hamster("Timmy", "Gus", 15);
+console.log(Pet2);
+timmy.buyHamster(Pet2);
+console.log(timmy);
+
+// getName();
+// getAge();
+// getWeight();
+// greet();
+// eat();
+// exercise();
+// ageUp();
+// buyHamster();
+
+//I used both the for loop and calling the method for the instructions, but realize just calling the method is not DRY. I also changed a few of the returns to console.log even though the instructions say 'return' so that I could see my results in the console. 
