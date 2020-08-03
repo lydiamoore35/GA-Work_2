@@ -13,7 +13,7 @@ const bottle = {
         wood: "brown"
     }
 }
-console.log(bottle.cap.plastic)
+console.log(bottle.cap.plastic);
 
 const receipt = [{
     purchased: {
@@ -56,15 +56,20 @@ const options = () => {
 }
 powerButton()
 
-// //come back too
-// const vendingMachine = {
-//     snacks = [{
-//         chips: "1 dollar",
-//         candy: "2 dollars",
-//         soda: "3 dollars"
-//     }],
-//     const vend = (num) => {
-//         return vendingMachine.snacks[num];
-//     }
-// }
-// console.log(vendingMachine.vend([2]))
+
+const vendingMachine = {
+    snacks: [{
+        option: "chips",
+        cost: 2,
+    },{
+        option: "candy",
+        cost: 3,
+    },{
+        option: "soda",
+        cost: 5,
+    }],
+        vend (input){
+        console.log(vendingMachine.snacks[input]);
+    }    
+}
+vendingMachine.vend(2);
