@@ -1,28 +1,28 @@
 ////CALLBACKS////
 
-// const add = (Number.add) => {
-//     console.log(5 + 5)
-// };
+const add = (Number.add) => {
+    console.log(5 + 5)
+};
 
 ////FUNCTION DEFINITION PLACEMENT////
 
 
-// const bar = () => {
-//     console.log('bar here');
-// }
-// bar();
+const bar = () => {
+    console.log('bar here');
+}
+bar();
 
 
-// const foo = () => {
-//     console.log('foo here');
-// }
-// foo();
+const foo = () => {
+    console.log('foo here');
+}
+foo();
 
-// foo();
+foo();
 
-// const foo ()=>{
-//     console.log('hi');
-// }
+const foo ()=>{
+    console.log('hi');
+}
 //error - Missing initializer in const declaration - this means that the funtion name "foo" has not been established because there is no '=' after 'foo' before the first ().
 
 ////Section 3 Array Methods with Callbacks////
@@ -52,13 +52,13 @@ console.log(panagrams.findIndex(words => words.length < 2))
 
 //FOR EACH
 console.log(nums.forEach(num => num * 3))
-panagram.forEach((word) => {
+panagrams.forEach((word) => {
     console.log(word + "!")
 })
 
 //MAP
 console.log(nums.map(num => num * 100))
-console.log(panagrams.map(words => words.toUpperCase))
+console.log(panagrams.map(words => words.toUpperCase()))
 
 //SOME
 console.log(nums.some(num => num % 7 === 0))
