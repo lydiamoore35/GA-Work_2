@@ -11,7 +11,7 @@ class Hero {
         'you can\'t count my calories'] 
     } 
     talkSass(){
-        console.log(randomNum(this.catchPhrases));
+        console.log(this.catchPhrases[Math.floor(Math.random())]);
     }
     announceHealth(){
         console.log(this.health);
@@ -38,7 +38,7 @@ class Enemy {
             'i\'m more dangerous than an uncovered sewer']
     }
     talkSmack(){
-        console.log(randomNum(this.catchPhrases));
+        console.log(this.catchPhrases[Math.floor(Math.random())]);
     }
     announceHealth(){
         console.log(this.health);
@@ -49,3 +49,8 @@ class Enemy {
 }
 const pizzaRat = new Enemy('Pizza Rat',this.health,this.weapons,this.catchPhrases);
 console.log(pizzaRat);
+
+dougie.talkSass();
+pizzaRat.talkSmack();
+dougie.announceHealth();
+pizzaRat.announceHealth();

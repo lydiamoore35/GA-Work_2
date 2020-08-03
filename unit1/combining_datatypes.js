@@ -47,14 +47,12 @@ const crayonSelector = () => {
 }
 console.log(crayonSelector().crayons[2]);
 
-
-const powerButton = () => {
-    return options() 
-}
-const options = () => {
-    console.log("select a song")
-}
-powerButton()
+let powerButton = () => {
+    return (options = () => {
+      console.log("select a song");
+    });
+  };
+  powerButton();
 
 
 const vendingMachine = {
