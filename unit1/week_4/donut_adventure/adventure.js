@@ -17,14 +17,11 @@ class Hero {
     announceHealth(){
         console.log(this.health);
     } 
-    fight(){
+    fight(enemy){
         console.log('i\'m ready to rumble');
-        console.log(this.weapons[Math.floor(Math.random())]);
-        console.log(this.weapons.sprinkleSpray);
-        console.log(this.weapons.sugarShock);
-        //const enemy = () => {
-        // console.log(announceHealth() -= damage);
-
+        //console.log(this.weapons.sprinkleSpray);
+        //console.log(this.weapons.sugarShock);
+        enemy.health -= this.weapons.sprinkleSpray;
         }
     }    
 const dougie = new Hero('Dougie',this.health,this.weapons,this.catchPhrases);
@@ -51,15 +48,13 @@ class Enemy {
     }
     fight(enemy){
         console.log('i\'m gonna flatten you like a slice of pepperoni!');
-        console.log(this.weapons.pepperoniStars);
-        console.log(this.weapons.cheeseGrease);
-        const damage = this.weapons.pepperoniStars;
-
-        console.log(announceHealth() - damage);
-        //console.log(this.weapons[Math.floor(Math.random())]);
-
+        //console.log(this.weapons.pepperoniStars);
+        //console.log(this.weapons.cheeseGrease);
+        enemy.health -= this.weapons.pepperoniStars;
+        console.log(enemy.health);
     }
-}
+} 
+
 const pizzaRat = new Enemy('Pizza Rat',this.health,this.weapons,this.catchPhrases);
 console.log(pizzaRat);
 
@@ -70,3 +65,14 @@ console.log(pizzaRat);
 
 dougie.fight(pizzaRat);
 pizzaRat.fight(dougie);
+dougie.fight(pizzaRat);
+pizzaRat.fight(dougie);
+dougie.fight(pizzaRat);
+pizzaRat.fight(dougie);
+
+
+
+
+
+
+
