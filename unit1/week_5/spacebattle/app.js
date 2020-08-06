@@ -32,17 +32,23 @@ class Spaceship {
 //i need to create a method that will attack one of the 6 alien spaceships 
 //should this be in a for/while loop to continue until the alien's hill reaches 0??    
     attack(alien){
-        if (Math.floor(Math.random() <= alien.accuracy)){
-            console.log("You successfully hit the alien ship!");
-            console.log(alien.hull -= this.firepower);
+        if (Math.floor(Math.random() <= alien.accuracy && alien.hull <= 0)){
+            const intial = prompt("You successfully hit the alien ship! The alien ship has " + (alien.hull -= this.firepower) + " life remaining. Would you like to attack the next alien ship?" , "Yes/No");
+            }else if(alien.hull > 0)
+                const tryAgain = prompt("Don't let them get away! Would you like to finish them off?" , "Yes/No");
+                if(tryAgain === "Yes"){
+                    alien.attack();
+                }else if(tryAgain === "No"){
+                    alert("GAME OVER")
+                }
         }else{
             const nextShot = prompt("You missed! Do you want to take another shot??" , "Yes/No");
-                if(nextShot = "Yes"){
+                if(nextShot === "Yes"){
                     if(Math.floor(Math.random() <= alien.accuracy)){
-                     prompt("You successfully hit the alien ship!")       
+                     prompt("You successfully hit the alien ship! The alien ship has " + (alien.hull -= this.firepower) + " life remaining. Would you like to attack the next alien ship?" , "Yes/No")       
                     }
-                }else(nextShot = "No");{
-                    prompt("GAME OVER")
+                }else(nextShot === "No");{
+                    alert("GAME OVER")
 
                 }
         }
@@ -79,6 +85,18 @@ const alien5 = new Alien("alien5");
 
 const alien6 = new Alien("alien6");
 //console.log(alien6);
+
+class Game {
+    constructor(){
+
+    }
+
+    hullStatus(alien, spaceship){
+       if(this.hull <= 0){
+           hullStatus = prompt("You successfully hit the spaceship and killed the aliens!")
+       } 
+    }
+}
 
 //i need to use a method within the classes or a function within a while loop used to establish the act of attacking 
 //attacking needs to factor in the classes methods: hull, firepower, and accuracy, for both lydiaWynning and the 6 alien spaceships 
