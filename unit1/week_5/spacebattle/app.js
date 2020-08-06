@@ -29,13 +29,22 @@ class Spaceship {
         this.firepower = 5;
         this.accuracy = .7;
     }
-//i need to create a method that will attack one of the 6 alien spaceships     
+//i need to create a method that will attack one of the 6 alien spaceships 
+//should this be in a for/while loop to continue until the alien's hill reaches 0??    
     attack(alien){
         if (Math.floor(Math.random() <= alien.accuracy)){
-            console.log("The attack was successful");
-            console.log(enemy.hull -= this.firepower);
+            console.log("You successfully hit the alien ship!");
+            console.log(alien.hull -= this.firepower);
         }else{
-            console.log("You missed" , "Do you want to take another shot?")
+            const nextShot = prompt("You missed! Do you want to take another shot??" , "Yes/No");
+                if(nextShot = "Yes"){
+                    if(Math.floor(Math.random() <= alien.accuracy)){
+                     prompt("You successfully hit the alien ship!")       
+                    }
+                }else(nextShot = "No");{
+                    prompt("GAME OVER")
+
+                }
         }
     }
 }
