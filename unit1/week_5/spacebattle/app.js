@@ -21,17 +21,18 @@
 
 //I need to create a class for my spaceship//
     //within the constructor i need name = LydiaWynning, hull = 20, firepower = 5, accuracy = .7
-//const alienFleet = [];
+
+alert("Earth has been attacked by a horde of aliens! You are the captain of the lydiaWynning on a mission to destroy every last alien ship. Battle the aliens as you try to destroy them with your lasers!")
+
+const alienArray = [];
+
 class Game {
-
     hullStatus(alien, spaceship){
-       if(this.hull <= 0){
+       if(alienArray[0].hull <= 0){
            const hullStatus = prompt("You successfully hit the spaceship and killed the aliens!")
-       }
+        }
     }   
-   
-    }   
-
+}   
 class Spaceship {
     constructor(){
         this.name = "lydiaWynning";
@@ -41,35 +42,29 @@ class Spaceship {
     }
  
     attack(alien){
-        const initial = prompt("Earth has been attacked by a horde of aliens! You are the captain of the " + this.name + " on a mission to destroy every last alien ship. Battle the aliens as you try to destroy them with your lasers!" ,"Yes/No");
-        if (Math.floor(((Math.random() * 3) + 6) / 10) <= alien.accuracy && initial === "Yes"){
-            if(alien.hull >= 1){
-            alien1.firepowerStatus();
-                const tryAgain = prompt("Don't let them get away! Would you like to finish them off?" , "Yes/No");
-                if(tryAgain === "Yes"){
-                    lydiaWynning.attack();
+        const initial = prompt("Would you like to use your lasers to destroy the alien ships?","Yes/No");
+        if (Math.floor(((Math.random() * 3) + 6) / 10) <= alienArray[0].accuracy && initial === "Yes"){
+            if(alienArray[0].hull >= 1){
+            alienArray[0].firepowerStatus();
+                alert("The ship was not destroyed. Brace for counter attack!")
+                alienArray[0].attack();
                 }else(tryAgain === "No")
-                    alert("GAME OVER")
-                }    
-            }else if(alien.hull <= 0){
+                    alert("GAME OVER")    
+            }else if(alienArray[0].hull <= 0){
                 alert("You successfully destroyed the alien ship!")
-                lydiaWynning.attack(alien2) 
-            } 
-//is there a way to have the next alien ship populate and run in this method and replace alien 2 with alien 3  
-
+                const hitNextShip = prompt("Would you like to use your lasers to attack the next alien ship?" , "Yes/No")
+                if(hitNextShip === "Yes"){
+                alienArray.shift();    
+                lydiaWynning.attack() 
+            }else("GAME OVER")
+        }     
         else{
-            const nextShot = prompt("You missed! Do you want to take another shot??" , "Yes/No");
-                if(nextShot === "Yes"){
-                    if(Math.floor(((Math.random() * 3) + 6) / 10) <= alien.accuracy){
-                     alert("You successfully hit the alien ship! The alien ship has " + (alien.hull -= this.firepower) + " life remaining. Would you like to attack the next alien ship?" , "Yes/No")       
-                    }
-                }else(nextShot === "No");{
-                    alert("GAME OVER")
+            alert("You missed! Prepare to be attacked!")
 
                 }
         }
     }
-}
+    
 const lydiaWynning = new Spaceship();
 console.log(lydiaWynning);
 
@@ -84,29 +79,37 @@ class Alien {
     }
     firepowerStatus(alien){
         this.hull -= this.firepower;
-        alert("Your attack was successful. The alien has " + this.hull); 
-        } 
+        alert("Your attack was successful. The alien has " + this.hull + " life remaining."); 
+    } 
+    attack(input){
+            if (Math.floor(((Math.random() * 3) + 6) / 10) <= this.accuracy && lydiaWynning.hull > 0){
+                    alert("You were hit with " + alienArray[0].firepower + " firepower.")
+                    alert("You have " + (lydiaWynning.hull -= alienArray[0].firepower));
+                if(lydiaWynning.hull > 0){
+                    alert("Get ready to fire back!")
+                    lydiaWynning.attack();
+                }else alert("GAME OVER");    
+            }else alert("The aliens missed - wahoo! Prepare to attack!") 
+            lydiaWynning.attack();   
+    }
 }
+
 const alien1 = new Alien("alien1");
-//console.log(alien1);
+const alien2 = new Alien("alien2");
+const alien3 = new Alien("alien3");
+const alien4 = new Alien("alien4");
+const alien5 = new Alien("alien5");
+const alien6 = new Alien("alien6");
+alienArray.push(alien1);
+alienArray.push(alien2);
+alienArray.push(alien3);
+alienArray.push(alien4);
+alienArray.push(alien5);
+alienArray.push(alien6);
+
+
 lydiaWynning.attack(alien1);
 
-const alien2 = new Alien("alien2");
-//console.log(alien2);
-
-const alien3 = new Alien("alien3");
-//console.log(alien3);
-
-const alien4 = new Alien("alien4");
-//console.log(alien4);
-
-const alien5 = new Alien("alien5");
-//console.log(alien5);
-
-const alien6 = new Alien("alien6");
-//console.log(alien6);
-
-
 //i need to use a method within the classes or a function within a while loop used to establish the act of attacking 
-//attacking needs to factor in the classes methods: hull, firepower, and accuracy, for both lydiaWynning and the 6 alien spaceships 
-    //QUESTION - we want nested loops - one for attacking and another for iterating over aliens??? keep it to one loop??
+
+//QUESTION - we want nested loops - one for attacking and another for iterating over aliens??? keep it to one loop??
