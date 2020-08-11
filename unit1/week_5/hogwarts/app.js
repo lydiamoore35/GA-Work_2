@@ -38,7 +38,34 @@ $(() => {
   $ul.append('<li>time turner</li>');//need to assign class secret
   $ul.append('<li>leash</li>');
   $ul.append("<li>Bertie Bott's Every Flavor Jelly Beans</li>");
+});
+
+////year 4////
+$(() => {
+  const $h5 = $('<h5>');
+  const $table = $('<table>');
+  const $tr = $('<tr>');
+  $table.append('<tr></tr>');
+  $h5.appendTo('#container');
+  $table.appendTo('#container');
+  const $th = $('<th></th>');
+  $tr.append('<th></th>');//can't seem to get the th to appear within the tr within the table??
   
 
+
+});
+
+////year 5////
+$(() => {
+
+});
+
+////year 6////
+$(() => {
+
+});
+
+////year 7////
+$(() => {
 
 });
