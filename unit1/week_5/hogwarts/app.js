@@ -17,12 +17,28 @@ $(() => {
   $h2.appendTo('#container');
   $h2.text("Lydia Moore");
   const $h3 = $('<h3>');
-  $('h3').appendTo('#container');
+  $h3.appendTo('#container');
   $h3.text('Gryffindor');
   const $h4 = $('<h4>');
-  $('h4').appendTo('#container');
+  $h4.appendTo('#container');
   $h4.addClass('owl' , 'Hedwig');
   $h4.text('Hornbeam wand with dragon heartstring core');
 });
 
 ////year 3////
+$(() => {
+  const $ul = $('<ul>');
+  $ul.attr('storage' , 'trunk');
+  $ul.appendTo('#container');
+  const $li = $('<li>');
+  $li.appendTo($ul);
+  $li.text('butter beer');
+  $ul.append('<li>invisibility cloak</li>');//need to assign class secret
+  $ul.append('<li>magic map</li>');//need to assign class secret
+  $ul.append('<li>time turner</li>');//need to assign class secret
+  $ul.append('<li>leash</li>');
+  $ul.append("<li>Bertie Bott's Every Flavor Jelly Beans</li>");
+  
+
+
+});
