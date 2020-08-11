@@ -27,17 +27,17 @@ $(() => {
 
 ////year 3////
 $(() => {
-  const $ul = $('<ul>');
-  $ul.attr('storage' , 'trunk');
-  $ul.appendTo('#container');
-  const $li = $('<li>');
-  $li.appendTo($ul);
-  $li.text('butter beer');
-  $ul.append('<li>invisibility cloak</li>');//need to assign class secret
-  $ul.append('<li>magic map</li>');//need to assign class secret
-  $ul.append('<li>time turner</li>');//need to assign class secret
-  $ul.append('<li>leash</li>');
-  $ul.append("<li>Bertie Bott's Every Flavor Jelly Beans</li>");
+  const $list = $('<ul></ul>').attr('storage' , 'trunk');
+  $('<li>butter beer</li>').appendTo($list);
+  const $cloak = $('<li>invisibility cloak</li>')
+  $cloak.appendTo($list);
+  $cloak.addClass('secret');
+  $('<li>magic map</li>').appendTo($list).addClass('secret');
+  $('<li>time turner</li>').appendTo($list).addClass('secret');
+  $("<li>Bertie Bott's Every Flavor Jelly Beans</li>").appendTo($list).addClass('secret');
+  $list.appendTo('#container');
+  
+
 });
 
 ////year 4////
@@ -51,8 +51,6 @@ $(() => {
   const $th = $('<th></th>');
   $tr.append('<th></th>');//can't seem to get the th to appear within the tr within the table??
   
-
-
 });
 
 ////year 5////
