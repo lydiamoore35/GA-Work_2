@@ -35,7 +35,7 @@ $(() => {
   $list.appendTo('#container');
 
 ////year 4////
-  const $h5 = $('<h5>Spring 2017</h5>');
+  const $h5 = $('<h5>').text('Spring 2017');
   $h5.appendTo('#container');
   const $table = $('<table>');
   $table.appendTo('#container');
@@ -67,10 +67,12 @@ $(() => {
   $h4.appendTo('#container');
   
 ////year 6////
-  $('.secret').hide('slow').delay(2000);
+  $('.secret').delay(2000).hide();
   $('<li>leash</li>').addClass('cabbage').appendTo($list);
   $(".cabbage").remove();
+
 ////year 7////
-
-
+  $h5.html('Fall 2018');
+  $list.prepend('<li>Butter Beer</li>');
+  $list.attr('storage' , 'chest');
 });
