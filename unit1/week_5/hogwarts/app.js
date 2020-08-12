@@ -62,7 +62,7 @@ $(() => {
   $h4Two.remove();
   $beer.remove();
   const $h4NewWand = $('<h4>This new wand is super awesome</h4>').appendTo('#container');
-  $h4NewWand.css('color', 'pink');
+  $h4NewWand.css('color', 'chartreuse');
   $h4.detach();
   $h4.appendTo('#container');
   

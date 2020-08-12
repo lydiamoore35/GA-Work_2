@@ -1,6 +1,10 @@
 body {
     background-color: cornsilk;
     text-align: center;
+    font-family: fantasy;
+    background-image: url(https://s.abcnews.com/images/Entertainment/HT-harry-potter-01-as-161116_16x9_992.jpg);
+    background-size: cover;
+    color: cornsilk;
 }
 main {
     color: chartreuse;
@@ -14,12 +18,12 @@ main {
 li {
     list-style-type: none;
     text-align: center;
-    margin: auto;
+    margin: 1em 1em 1em -1.5em;
 }
 table {
     border-color: gray;
     border-style: solid;
-    border-width: 1px;
+    border-width: 2px;
     margin: auto;
 }
 .cabbage {
