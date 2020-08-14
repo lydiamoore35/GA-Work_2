@@ -105,7 +105,6 @@ const keepItSecretKeepItSafe = () => {
     // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 
     // when you think you have given Frodo the ring, check in your Elements tab to see that it works correctly
-
 };
 
 // COMMIT YOUR WORK
@@ -122,7 +121,6 @@ const makeBaddies = () => {
     let $li = $('<li>').text(chooseBaddies).addClass('baddy');
     $li.appendTo($ulBaddies);
     $('#Mordor').append($ulBaddies);
-
   }
   // 2. give each of the baddies a class of "baddy"
 
@@ -162,7 +160,7 @@ const makeBuddies = () => {
 const leaveTheShire = () => {
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
       // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
-
+  $('ul').eq(0).children().appendTo($('#Rivendell'));
   //Stretch: add an event handler/listener so that when you click on the `h1` The Shire, this function will be called (be sure to do it in the window.onload/document.ready function)
 
 };
