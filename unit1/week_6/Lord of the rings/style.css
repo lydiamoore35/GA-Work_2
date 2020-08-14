@@ -4,21 +4,20 @@ html, body {
   margin: 0 0 0 0;
 }
 
-
 @font-face {
   font-family: Bilbo;
-  src: url(../fonts/bilboregular.ttf);
+  src: url(bilboregular.ttf);
 }
 
 @font-face {
   font-family: BilboBold;
-  src: url(../fonts/bilbobold.ttf);
+  src: url(bilbobold.ttf);
 }
 
 body {
   top: 0;
   left: 0;
-  background-image:url(../images/middle-earth.jpg);
+  background-image:url(middle-earth.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   font-family: BilboBold, Copperplate, "Copperplate Gothic Light", fantasy;
@@ -72,7 +71,7 @@ article:nth-child(2) {
 article:nth-child(3) {
   left: 71%;
   top: 81%;
-  /*background: url(../images/eye_of_sauron.png) no-repeat;*/*/
+  /*background: url(eye_of_sauron.png) no-repeat;*/
   background-position: 0em;
   background-size: 7em;
   height: 25%;
@@ -139,7 +138,7 @@ ul {
     top: 66%;
   }
 
-
+}
 @media (max-width: 850px) {
 
   /* The Shire */
