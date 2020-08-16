@@ -81,11 +81,6 @@ input:focus {
   /*color: rgba(255,255,255, .5);*/
 }
 
-li {
-  text-align: center;
-  list-style: none;
-}
-
 
 /* make list containers flex */
 #to-do-list,  #completed {

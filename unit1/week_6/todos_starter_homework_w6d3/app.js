@@ -1,25 +1,23 @@
 const list = [];
 
 $(() => {
-    const $toDo = $('<ul>').appendTo('#to-do-list');
-    const $done = $('<ul>').appendTo('.done-item');
-    $toDo.attr('id' , 'lists');
+    const $toDo = $('<ul>').attr('id' , 'to-do-list').appendTo('#to-do-list');
+    const $done = $('<ul>').attr('id' , 'completed').appendTo('#completed');
+    
     
     const render = () => {
         console.log('list: ' , list);
-        $toDo.empty();
-        list.forEach((item) => {
-            let $li = $('<li>' + item + '</li>');
-            $toDo.append($li);
-            const $button = $('<button>').text('complete');
-            $button.appendTo($li);
-        
-        })
+        $toDo.append('<li>' + list[list.length-1] + '</li>');
+        $('li').addClass('to-do-item');
+        const $button = $('<button>').text('complete');
+        $button.appendTo($('li'));
 
         $('button').on('click' , (event) => {
             $(event.currentTarget);
-            $li.remove().appendTo($done);
+            $('li').removeClass('to-do-item');
+            $('li').addClass('done-item').appendTo($done);
     });
+       
 }
     
     $('#submit').on('click' , (event) => {
