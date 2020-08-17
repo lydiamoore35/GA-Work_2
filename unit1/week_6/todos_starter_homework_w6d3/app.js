@@ -1,36 +1,29 @@
 const list = [];
 
 $(() => {
-    const $toDo = $('<ul>').attr('id' , 'to-do-list').appendTo('#to-do-list');
-    const $done = $('<ul>').attr('id' , 'completed').appendTo('#completed');
+    const $toDo = $('<ul>').appendTo('#to-do-list');
+    const $done = $('<ul>').appendTo('#completed');
     
     
     const render = () => {
-        console.log('list: ' , list);
-        $toDo.append('<li>' + list[list.length-1] + '</li>');
-        $('li').addClass('to-do-item');
+        $toDo.empty();
+        let $li = $('<li>').text($('#input-box').val());
+        //$toDo.append($li + list[list.length-1] + $li);
         const $button = $('<button>').text('complete');
-        $button.appendTo($('li'));
-
-        $('button').on('click' , (event) => {
-            $(event.currentTarget);
-            $('li').removeClass('to-do-item');
-            $('li').addClass('done-item').appendTo($done);
-    });
+        $button.appendTo($('#to-do-list'));
+        $button.on('click' , (event) => {
+            $('li').detach().appendTo($done);
+        });
        
 }
-    
     $('#submit').on('click' , (event) => {
-        console.log($('#input-box').val());
+        $('#input-box').val('');
         list.push($('#input-box').val());
         event.preventDefault();
         $(event.currentTarget).trigger('reset');
 
         render();
     })
-
-   
-
         
 });
 
