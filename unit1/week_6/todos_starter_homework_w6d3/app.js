@@ -4,22 +4,25 @@ $(() => {
     const $toDo = $('<ul>').appendTo('#to-do-list');
     const $done = $('<ul>').appendTo('#completed');
     
-    
     const render = () => {
-        $toDo.empty();
-        let $li = $('<li>').text($('#input-box').val());
-        //$toDo.append($li + list[list.length-1] + $li);
-        const $button = $('<button>').text('complete');
-        $button.appendTo($('#to-do-list'));
-        $button.on('click' , (event) => {
-            $('li').detach().appendTo($done);
-        });
+        //console.log('list: ' , list);
+        const $li = $('<li>' + list[list.length-1] + '</li>').addClass('to-do-item');
+        $li.append($('<button>').text('complete').addClass('complete'));
+        $li.appendTo($toDo);
+
+        $('.complete').on('click' , (event) => {
+            $li.removeClass().detach();
+            $li.addClass('done-item');
+            $li.appendTo($done);
+
+    });
        
 }
     $('#submit').on('click' , (event) => {
-        $('#input-box').val('');
+        console.log($('#input-box').val());
         list.push($('#input-box').val());
-        event.preventDefault();
+        //event.preventDefault();
+        ($('#input-box').val(''));
         $(event.currentTarget).trigger('reset');
 
         render();
