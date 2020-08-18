@@ -7,11 +7,12 @@ $(() => {
     const render = () => {
         //console.log('list: ' , list);
         const $li = $('<li>' + list[list.length-1] + '</li>').addClass('to-do-item');
-        $li.append($('<button>').text('complete').addClass('complete'));
+        $li.append($('<button>').text('completed').addClass('button'));
         $li.appendTo($toDo);
 
-        $('.complete').on('click' , (event) => {
-            $li.removeClass().detach();
+        $('.button').on('click' , (event) => {
+            $li.detach();
+            $li.children().text('remove').remove();
             $li.addClass('done-item');
             $li.appendTo($done);
 
