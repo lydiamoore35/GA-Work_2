@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    background-color: black;
+    height: 500px;
+    width: 500px;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+    padding-top: 30px;
+    
+
+}
+/*.row1,.row2,.row3 {
+    margin-top: 2em;
+}
+.row1,.row2 {
+    border-bottom: 2px solid pink;
+}*/
+
+.square {
+    background-color: turquoise;
+    width: 150px;
+    height: 150px;
+    flex-wrap: wrap;
+    border: 2px solid pink;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+}

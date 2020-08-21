@@ -14,13 +14,13 @@ $(() => {
         $('.button').on('click' , (event) => {
             //$(event.currentTarget).parent().text('remove').addClass('done-item').appendTo($done);
             // $li.detach();
-            $(event.currentTarget).removeClass('button').addClass('newButton');
+            $(event.currentTarget).removeClass('button').addClass('buttonRemove');
             $li.children().text('remove');
             $li.addClass('done-item');
             $li.removeClass('to-do-item');
             $done.append($(event.currentTarget).parent());
             // $li.appendTo($done);
-        $('.newButton').on('click' , (event) => {
+        $('.buttonRemove').on('click' , (event) => {
             $(event.currentTarget).parent().remove();
             $(event.currentTarget).trigger('reset');
         })
