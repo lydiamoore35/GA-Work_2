@@ -1,12 +1,25 @@
 const React = require("react");
 const Layout = require("./components/Layout.jsx")
+// const budget = require("../models/budget.js");
 
 class Index extends React.Component {
   render() {
+    const {budget} = this.props
     return (
       <Layout>
-        <h1>Hello World</h1>
-        {/* <link rel="stylesheet" href="css/styles.css"/> */}
+      <table>
+        {budget.map((item, index) => {
+          return (
+          <tr>
+            {/* <td>{item.date}</td> */}
+            <td><a href = {`/${index}`}>{item.name}</a></td>
+            <td>{item.from}</td>
+            <td>{item.amount}</td>
+            <td>{item.tags}</td>
+          </tr>
+           ) 
+          })}
+      </table>
       </Layout>
     );
   }
