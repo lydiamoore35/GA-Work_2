@@ -20,6 +20,9 @@ class Index extends React.Component {
            ) 
           })}
       </table>
+      <h2>
+      <a href="/new">Add Item</a>
+      </h2>
       </Layout>
     );
   }

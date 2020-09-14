@@ -15,7 +15,7 @@ class New extends React.Component {
             <input type="text" placeholder="From" name="from"/>
             <input type="text" placeholder="tags" name="tags"/>
             <input type="submit"/>
-            </form>      
+            </form>    
           </Layout>
         );
       }
