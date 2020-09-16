@@ -6,16 +6,16 @@ class Layout extends React.Component {
       <html>
         <head>
           <title>{this.props.title}</title>
-          <link rel="stylesheet" href="css/styles.css"/>
+          <link rel="stylesheet" href="public/css/styles.css"/>
         </head>
             <body>
-                <header>
-                    <h1>Pokedex!</h1>
-                </header>
-                    <main>{this.props.children}</main>
-                <footer>
-                    <h1></h1>
-                </footer>
+              <header>
+                  <h1>Pokedex!</h1>
+              </header>
+                  <main>{this.props.children}</main>
+                  <footer>
+                      <h1></h1>
+                  </footer>
             </body>
       </html>
     );
