@@ -11,18 +11,18 @@ class New extends React.Component {
             <form action="/" method="post">
             
             <h3>Name</h3>
-            <input type="text" name="name"/>
+                <input type="text" name="name"/>
             
             <h3>HP</h3>
-            <input type="text" name="stats[hp]"/>
+                <input type="text" name="stats[hp]"/>
             
             <h3>Attack</h3>
-            <input type="text" name="stats[attack]"/>
+                <input type="text" name="stats[attack]"/>
             
             <h3>Defense</h3>
-            <input type="text" name="stats[defense]"/>
+                <input type="text" name="stats[defense]"/>
             
-            <input type="submit" value="New Pokemon"/>
+                <input type="submit" value="New Pokemon"/>
            
             </form>    
           </Layout>

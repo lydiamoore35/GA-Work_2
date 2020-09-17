@@ -50,6 +50,11 @@ app.get("/:index/edit", (req, res) => {
     });
   }); 
 
+app.put("/:index", (req, res) => {
+    pokedex[req.params.index] = req.body.pokedex;
+    res.redirect("/{pokedex}/");
+    });  
+
 //server listener//
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);

@@ -10,16 +10,16 @@ class Edit extends React.Component {
         <form action={`/${index}?_method=PUT`} method="post">
         
         <h3>Name</h3>
-        <input type="text" name="name" value={pokedex.name}/>
+            <input type="text" name="name" value={pokedex.name}/>
         
         <h3>HP</h3>
-        <input type="text" name="stats[hp]" value={pokedex.stats.hp}/>
+            <input type="text" name="stats[hp]" value={pokedex.stats.hp}/>
         
         <h3>Attack</h3>
-        <input type="text" name="stats[attack]" value={pokedex.stats.attack}/>
+            <input type="text" name="stats[attack]" value={pokedex.stats.attack}/>
         
         <h3>Defense</h3>
-        <input type="text" name="stats[defense]" value={pokedex.stats.defense}/>
+            <input type="text" name="stats[defense]" value={pokedex.stats.defense}/>
         
         <input type="submit" value="Update"/>
         </form>

@@ -10,21 +10,18 @@ class Index extends React.Component {
             <table>
                 {pokedex.map((item, index) => {
                     return (
-                    <div>
-                        <a href = {`/${index}`}>{item.name}</a><img src={`${item.img}`} alt="Pokemon" width="100" height="120"></img>
+                    <div class="info">
+                        <a href = {`/${index}`}>{item.name}</a>
+
                         <a href={`/${index}/edit`}>Edit Pokemon</a>
-                        <br></br>
+
                         <a href={`/${index}/delete`}>Delete Pokemon</a>
                         <br></br>
-                        <a href={`/new`}>Add a New Pokemon</a>
-
+                        <img src={`${item.img}`} alt="Pokemon" width="100" height="120"></img>
                     </div>
                     )
                 })}
                 </table>
-                <h2>
-                <a href="/new">Add New Pokemon</a>
-                </h2>
                 </Layout>
         )};  
       }
