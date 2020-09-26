@@ -1,4 +1,6 @@
-module.exports = [
+const mongoose = require('mongoose');
+const Product = require("./products")
+const productsArr = [
     {
       name: 'Beans',
       description: 'A small pile of beans. Buy more beans for a big pile of beans.',
@@ -19,3 +21,7 @@ module.exports = [
       qty: 1
     }
   ]
+
+Product.create(productsArr, (err, data) => {
+    console.log(data)
+  })

@@ -5,11 +5,12 @@ class New extends React.Component {
     return (
         <div>
             <h1>Lydia's Shop</h1>
-            <form action="/fruits" method="POST">
+            <form action="/" method="POST">
                 Name: <input type="text" name="name" /><br/>
                 Description: <input type="text" name="description" /><br/>
+                Image: <input type="text" name="img" /><br/>
                 Price: <input type="text" name="price" /><br/>
-                Qty: <input type="text" name="qty" /><br/>
+                Qty: <input type="number" name="qty" /><br/>
                 <input type="submit" name="" value="Add Product"/>
              </form>
         </div>);

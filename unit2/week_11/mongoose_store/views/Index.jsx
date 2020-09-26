@@ -1,14 +1,13 @@
 const React = require("react");
 const Layout = require("../views/components/Layout.jsx");
-const products = require("../models/products.js");
 
 class Index extends React.Component {
     render() {
-      const {products} = this.props
+      const {inventory} = this.props
         return (
             <Layout>
             <table>
-                {products.map((item, index) => {
+                {inventory.map((item, index) => {
                     return (
                     <div class="info">
                         <a href = {`/${index}`}>{item.name}</a>
@@ -27,7 +26,9 @@ class Index extends React.Component {
                             {item.qty}
                         </h3>
 
-                        <a href={`/${index}/edit`}>Edit Product</a>
+                        <a href={`/${item.id}/edit`}>Edit Product</a>
+                        <br></br>
+                        <a href={`/${item.id}/delete`}>Delete Product</a>
                     </div>
                     )
                 })}
@@ -35,4 +36,5 @@ class Index extends React.Component {
             </Layout>
         )};  
       }
-  module.exports = Index;
+
+module.exports = Index;

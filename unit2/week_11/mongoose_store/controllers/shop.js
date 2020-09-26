@@ -1,12 +1,15 @@
 const {Router} = require("express");
 const router = Router();
-const products = require("../models/products.js");
+const Product = require("../models/products.js");
+const productsSeed = require('../models/productsSeed');
 
 //Routes//
 
 //Index//
 router.get("/", (req, res) => {
-    res.render("Index.jsx", {products});
+    Product.find({}, (error, inventory) => {
+        res.render("Index", {inventory});
+    });
 });
 
 //New//
@@ -14,37 +17,39 @@ router.get("/new", (req, res) => {
   res.render("../views/New.jsx");
 }); 
 
-// //Delete//
-router.delete("/:index", (req, res) => {
-    products.splice(req.params.index, 1);
-    res.redirect("/");
+//Delete//
+router.get("/:id/delete", (req, res) => {
+    Product.findByIdAndRemove(req.params.id, (error, data) => {
+        res.redirect("/");
+    })
 });
 
 //Update//
-router.put("/:index", (req, res) => {
-    products[req.params.index] = req.body.Index;
-    res.redirect("/");
+router.put("/:id", (req, res) => {
+    Product.findByIdAndUpdate(req.params.id, req.body, {new: true}, (error, updatedProduct) => {
+        res.redirect("/");
+    })
 });  
 
 //Create//
 router.post("/", (req, res) => {
-  products.push(req.body);
-  res.redirect("/");
+    Product.create(req.body, (error, createdProduct) => {
+      console.log(req.body)
+        res.redirect("/");
+  })
 });
 
 //Edit//
-router.get("/:index/edit", (req, res) => {
-  res.render("products/edit.jsx", {
-    index: req.params.index,
-    products: products[req.params.index],
+router.get("/:id/Edit", (req, res) => {
+    Product.findById(req.params.id, (error, editedProduct)=> {
+      res.render("Edit.jsx", {editedProduct})
   });
 });
 
 //Show//
-router.get("/:index", (req, res) => {
-    res.render("../views/Show.jsx", {
-      products: products[req.params.index],
-      Index: req.params.index,
+router.get("/:id", (req, res) => {
+    Product.findById(req.params.id, (error, showProduct) => {
+        res.render("Show.jsx", {showProduct})
     });
 });
 
