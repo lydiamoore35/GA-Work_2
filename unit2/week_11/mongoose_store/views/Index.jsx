@@ -6,23 +6,25 @@ class Index extends React.Component {
       const {inventory} = this.props
         return (
             <Layout>
-            <table>
+            <table> 
                 {inventory.map((item, index) => {
                     return (
-                    <div class="info">
+                    <div className = "products">
                         <a href = {`/${index}`}>{item.name}</a>
                         
-                        <img src={`${item.img}`} alt="product" width="100" height="120"></img>
+                        <h3>
+                            <img src={`${item.img}`} alt="product" width="100" height="120"></img>
+                        </h3>
 
                         <h3>
                             {item.description}
                         </h3>
 
-                        <h3>
+                        <h3>$
                             {item.price}
                         </h3>
 
-                        <h3>
+                        <h3>Remaining: 
                             {item.qty}
                         </h3>
 

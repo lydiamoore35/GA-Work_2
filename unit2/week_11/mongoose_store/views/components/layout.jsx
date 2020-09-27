@@ -6,9 +6,9 @@ class Layout extends React.Component {
       <html>
         <head>
           <title>{this.props.title}</title>
-          <link rel="stylesheet" href="/css/styles.css"/>
+          <link rel="stylesheet" href="/css/style.css"/>
         </head>
-          <body>
+          <body className="container">
             <header>
               <h1>Lydia's Shop</h1>
                 <h2>
