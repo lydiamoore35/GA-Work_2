@@ -7,10 +7,11 @@ class Layout extends React.Component {
         <head>
           <title>{this.props.title}</title>
           <link rel="stylesheet" href="/css/style.css"/>
+          <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet"></link>
         </head>
           <body className="container">
             <header>
-              <h1>Lydia's Shop</h1>
+              <h1>Lydia's Veggie Shop</h1>
                 <h2>
                     <a href="/new">Add New Product</a>
                 </h2>

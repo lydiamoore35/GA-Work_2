@@ -41,7 +41,7 @@ router.post("/", (req, res) => {
 
 //Edit//
 router.get("/:id/Edit", (req, res) => {
-    Product.findById(req.params.id, (error, editedProduct)=> {
+    Product.findById(req.params.id, (error, editedProduct) => {
       res.render("Edit.jsx", {editedProduct})
   });
 });
@@ -49,8 +49,18 @@ router.get("/:id/Edit", (req, res) => {
 //Show//
 router.get("/:id", (req, res) => {
     Product.findById(req.params.id, (error, showProduct) => {
+        console.log("id", req.params.id);
+        console.log("show", showProduct);
+        console.log("error", error);
         res.render("Show.jsx", {showProduct})
     });
 });
+
+// //Buy//
+// router.put("/:id/Buy", (req, res) => {
+//     Product.findByIdAndUpdate(req.params.id, req.body, {new: true}, (error, updatedProduct) => {
+//         res.redirect("/");
+//     })
+// });  
 
 module.exports = router;

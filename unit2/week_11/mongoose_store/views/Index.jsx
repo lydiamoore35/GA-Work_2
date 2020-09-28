@@ -10,7 +10,7 @@ class Index extends React.Component {
                 {inventory.map((item, index) => {
                     return (
                     <div className = "products">
-                        <a href = {`/${index}`}>{item.name}</a>
+                        <a href = {`/${item._id}`}>{item.name}</a>
                         
                         <h3>
                             <img src={`${item.img}`} alt="product" width="100" height="120"></img>

@@ -2,9 +2,9 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    
+    font-family: 'Questrial', sans-serif; 
 }
-.products {
+.products, .show {
     justify-content: space-evenly;
     background-color: darkgrey;
     text-align: center;
@@ -18,12 +18,18 @@ main {
 }
 h3 {
 margin: 2%;
+padding:2%
 }
-header {
-    align-content: center;
-    display: flex;
-    justify-content: center;
+header, footer {
+    padding-left: 3%;
 }
 h2 {
     margin-left: 5%;
 }
+.show {
+    flex-wrap: wrap;
+}
+.button {
+    border-radius: 2%;
+}
+
