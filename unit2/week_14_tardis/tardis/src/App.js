@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import DivOne from "./components/divOne"
 
-function App() {
+  const App = () => {
   const [state, setState] = React.useState({
     tardis:{  
        name: "Time and Relative Dimension in Space",
@@ -29,14 +29,9 @@ function App() {
   }
 
   return (
-    <>
       <div className="App">
-        <h3 onClick={() => {
-            changeIt(state.tardis.name)}}>{state.tardis.name}
-          </h3> 
+        <DivOne name={state.tardis.name} change={changeIt}/>
       </div>
-      <DivOne />
-    </>
   );
   
 }

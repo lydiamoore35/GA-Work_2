@@ -1,12 +1,13 @@
 import React from "react"
+import DivTwo from "./divTwo.js"
 
 const DivOne = (props) => {
-    const {one} = props;
+    const {name, change} = props;
 
     return (
-        <>
-            <div>{one.tardis.name}</div>
-        </>
+        <div>
+            <DivTwo name={name} change={change}/>
+        </div>
     )
 }
 
