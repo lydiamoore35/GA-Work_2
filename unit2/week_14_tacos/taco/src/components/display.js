@@ -16,7 +16,12 @@ const Display = (props) => {
                 <p>{taco.shell.recipe}</p>
             <h1>{taco.condiment.name}</h1>
                 <p>{taco.condiment.recipe}</p>
+
+            <form onSubmit={loaded}>
+                <input type="submit" value="New Taco"/>
+            </form>
         </div>
+        
         )
     }
 
