@@ -71,27 +71,28 @@ function App() {
       <h1>Lydia's Bookmarks</h1>
       <hr />
       <Link to="/create">
-        <button>Add Bookmark</button>
+        <button className="bookmark">Add Bookmark</button>
       </Link>
       <main>
         <Switch>
-          <Route exact path="/" render={(rp) => <Display {...rp} />} bookmarks={bookmarks} 
+  <Route exact path="/" render={(rp) => <Display {...rp} bookmarks={bookmarks} 
           selectBookmark={selectBookmark}
           deleteBookmark={deleteBookmark}
+          />}
           />
           <Route
             exact
             path="/create"
-            render={(rp) => (
+            render={(rp) =>
               <Form {...rp} label="create" bookmark={emptyBookmark} handleSubmit={handleCreate} />
-            )}
+            }
           />
           <Route
             exact
             path="/edit"
-            render={(rp) => (
-              <Form {...rp} label="update" bookmark={emptyBookmark} handleSubmit={handleUpdate} />
-            )}
+            render={(rp) =>
+              <Form {...rp} label="update" bookmark={selectedBookmark} handleSubmit={handleUpdate} />
+            }
           />
         </Switch>
       </main>

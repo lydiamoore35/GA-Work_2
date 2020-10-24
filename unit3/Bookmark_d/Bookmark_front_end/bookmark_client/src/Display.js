@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const Display = (props) => {
   const { bookmarks } = props;
 
@@ -7,15 +8,15 @@ const Display = (props) => {
     <div style={{ textAlign: "center" }}>
       {bookmarks.map((bookmark) => (
         <article>
-            <h2>{bookmark.title}</h2>
-            <h2><a href = {bookmark.url}/></h2>
-              <button
+            {/* <h2>{bookmark.title}</h2> */}
+            <a href={bookmark.url} target="_blank"><h2>{bookmark.title}</h2></a>
+              <button className="edit"
                 onClick={() => {
                   props.selectBookmark(bookmark);
                   props.history.push("/edit");
                 }}
                 >Edit Bookmark</button>
-                <button
+                <button className="delete"
                 onClick={() => {
                   props.deleteBookmark(bookmark);
                 }}
@@ -29,6 +30,7 @@ const Display = (props) => {
   const loading = <h1>Loading...</h1>;
 
   return bookmarks.length > 0 ? loaded() : loading;
+  
 };
 
 export default Display;
