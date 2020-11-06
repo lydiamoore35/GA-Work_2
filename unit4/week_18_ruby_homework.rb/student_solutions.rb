@@ -152,20 +152,37 @@
 ###### Color Array ######
 
 
-def color_array
-    colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
-    puts colors.sample()
-end
-color_array()
+# def color_array
+#     colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+#     puts colors.sample()
+# end
+# color_array()
 
-def color_array
-    colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
-    puts colors.reverse()
-end
-color_array()
+# def color_array
+#     colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+#     puts colors.reverse()
+# end
+# color_array()
 
-def color_array
-    colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
-    colors.each_with_index { |x| puts x.upcase}
+# def color_array
+#     colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+#     colors.each_with_index { |x| puts x.upcase}
+# end
+# color_array()
+
+
+
+###### Methods ######
+
+# find_area = Proc.new do |height, width|
+#     puts height * width
+# end
+# find_area.call(4,2)
+
+##COME BACK TO##
+def multiply_each_by_five (arr, nums)
+    nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0]
+    for arr in nums do
+        puts arr * 5
 end
-color_array()
+multiply_each_by_five()
