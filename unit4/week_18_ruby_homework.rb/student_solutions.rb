@@ -227,8 +227,26 @@
 ## COME BACK TO ##
 
 
-def sum_of_multiples (num)
-   while num < 1000 && num % 3 == 0 || num % 5 == 0 
-    puts sum_of_multiples.sum(num)
-end
-sum_of_multiples()
+# def sum_of_multiples (num)
+#    while num < 1000 && num % 3 == 0 || num % 5 == 0 
+#     puts sum_of_multiples.sum(num)
+# end
+# sum_of_multiples()
+
+### Primes ###
+
+def check_prime (num)
+    n = 2
+    while n < num 
+        false if num % n == 0
+        n += 1
+    end
+    true
+end 
+check_prime(10)
+
+# def check_prime (num)
+#     (2..num - 1).each {|x| false if (num % x) == 0}
+#     true
+# end
+# check_prime(10)
