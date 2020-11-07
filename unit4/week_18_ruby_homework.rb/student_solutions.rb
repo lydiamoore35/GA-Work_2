@@ -191,32 +191,44 @@
 ###### Methods with a Hash ######
 
 
-book = {
-  title: 'The Great Gatsby',
-  author: 'F Scott Fitzgerald',
-  year: 1925,
-  price: 10
-}
+# book = {
+#   title: 'The Great Gatsby',
+#   author: 'F Scott Fitzgerald',
+#   year: 1925,
+#   price: 10
+# }
 
-lamp = {
-  type: 'reading',
-  brand: 'Ikea',
-  price: 25
-}
+# lamp = {
+#   type: 'reading',
+#   brand: 'Ikea',
+#   price: 25
+# }
 
-table = {
-  type: 'bed side',
-  brand: 'Crate & Barrel',
-  color: 'birch',
-  price: 50
-}
+# table = {
+#   type: 'bed side',
+#   brand: 'Crate & Barrel',
+#   color: 'birch',
+#   price: 50
+# }
 
-def print_price (params) 
-    puts params[:price]
+# def print_price (params) 
+#     puts params[:price]
+# end
+# print_price(table)
+
+# def print_item_sums (params, params2)
+#     puts params[:price] + params2[:price]
+# end
+# print_item_sums(table,lamp)
+
+
+###### Solving problems with Ruby ######
+### Euler Problem ###
+## COME BACK TO ##
+
+
+def sum_of_multiples (num)
+   while num < 1000 && num % 3 == 0 || num % 5 == 0 
+    puts sum_of_multiples.sum(num)
 end
-print_price(table)
-
-def print_item_sums (params, params2)
-    puts params[:price] + params2[:price]
-end
-print_item_sums(table,lamp)
+sum_of_multiples()
