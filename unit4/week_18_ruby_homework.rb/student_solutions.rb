@@ -178,11 +178,11 @@
 # end
 # find_area.call(4,2)
 
-nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0]
-def multiply_each_by_five arr
-    arr.each{|x| p x * 5}
-end
-multiply_each_by_five(nums)
+# nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0]
+# def multiply_each_by_five arr
+#     arr.each{|x| p x * 5}
+# end
+# multiply_each_by_five(nums)
 
 
 ###### Methods with a Hash ######
@@ -232,18 +232,18 @@ multiply_each_by_five(nums)
 
 ### Primes ###
 
-# def check_prime (num)
-#     n = 2
-#     while n < num 
-#         false if num % n == 0
-#         n += 1
-#     end
-#     true
-# end 
-# check_prime(10)
+def check_prime (num)
+    n = 2
+    while n < num 
+        false if num % n == 0
+        n += 1
+    end
+    true
+end 
+puts check_prime(50)
 
 # def check_prime (num)
 #     (2..num - 1).each {|x| false if (num % x) == 0}
-#     true
+#     true 
 # end
-# check_prime(10)
+# check_prime(12)
