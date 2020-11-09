@@ -223,27 +223,44 @@
 ### Euler Problem ###
 ## COME BACK TO ##
 
-
-# def sum_of_multiples (num)
-#    while num < 1000 && num % 3 == 0 || num % 5 == 0 
-#     puts sum_of_multiples.sum(num)
-# end
-# sum_of_multiples()
+def sum_of_multiples(num)
+   while num < 1001 && (num % 3 == 0 || num % 5 == 0) 
+    puts .sum(num)
+   end
+end
+sum_of_multiples(1000)
 
 ### Primes ###
 
-def check_prime (num)
-    n = 2
-    while n < num 
-        false if num % n == 0
-        n += 1
-    end
-    true
-end 
-puts check_prime(50)
+## next 2 methods are not working and would love help to understand why, but i do have one that i finally got working just below it ##
+
+# def check_prime (num)
+#     n = 2
+#     while n < num 
+#         false if num % n == 0
+#         n += 1
+#     end
+#     true
+# end 
+# puts check_prime(50)
 
 # def check_prime (num)
 #     (2..num - 1).each {|x| false if (num % x) == 0}
 #     true 
 # end
 # check_prime(12)
+
+## working code! ##
+
+# def prime? (n)
+#     (2..n-1).none? {|number| n % number == 0}
+# end
+
+# puts prime?(5)
+# puts prime?(6)
+
+# def get_primes? ()
+#     Prime.each(100) do |prime|
+#         puts prime
+# end
+# get_primes?()
