@@ -228,7 +228,8 @@ def sum_of_multiples(num)
     puts .sum(num)
    end
 end
-sum_of_multiples(1000)
+sum_of_multiples()
+#why is this not working??
 
 ### Primes ###
 
