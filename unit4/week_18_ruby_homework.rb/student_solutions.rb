@@ -221,15 +221,13 @@
 
 ###### Solving problems with Ruby ######
 ### Euler Problem ###
-## COME BACK TO ##
 
-def sum_of_multiples(num)
-   while num < 1001 && (num % 3 == 0 || num % 5 == 0) 
-    puts .sum(num)
-   end
-end
-sum_of_multiples()
-#why is this not working??
+# def sum_of_multiples(num)
+#    while num < 1001 && (num % 3 == 0 || num % 5 == 0) 
+#     puts .sum(num)
+#    end
+# end
+# sum_of_multiples()
 
 ### Primes ###
 
@@ -251,17 +249,17 @@ sum_of_multiples()
 # end
 # check_prime(12)
 
-## working code! ##
+## working code! Part I and Part II ##
 
-# def prime? (n)
-#     (2..n-1).none? {|number| n % number == 0}
-# end
+def prime? (n)
+    (2..n-1).none? {|number| n % number == 0}
+end
+    def get_prime? (limit)
+        (1..limit).each {|num| puts prime? num}
+    end
+    puts prime?(5)
+    puts prime?(6)
 
-# puts prime?(5)
-# puts prime?(6)
+    get_prime?(100)
 
-# def get_primes? ()
-#     Prime.each(100) do |prime|
-#         puts prime
-# end
-# get_primes?()
+
