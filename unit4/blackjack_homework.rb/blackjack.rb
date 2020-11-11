@@ -20,22 +20,26 @@ class Card
     def initialize
         @value = value
     end
-end
 
-class Deck
-    def initialize 
-        @faces = [*(2..10), 'Jack', 'Queen', 'King', 'Ace']
-        @cards = []
-
+    class Deck
+        attr_accessor :cards
+        def initialize 
+            @faces = [*(2..10), 'Jack', 'Queen', 'King', 'Ace']
+            @cards = []
+        end
 #### create deck of cards ####
-@faces.each do |face|
-    if face.class == Integer
-        value = face
-    elsif face == 'Ace'
-        value = 11
-    else
-        value = 10
+        @faces.each do |face|
+            if face.class == Integer
+                value = face
+            elsif face == 'Ace'
+                value = 11
+            else
+                value = 10
+            end
+            @faces.each do |face|
+                @cards << Card.new(face, value)
+            end
+        end
+        @cards.shuffle!
     end
-end
-@cards.shuffle!
 end       
