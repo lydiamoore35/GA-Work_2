@@ -27,7 +27,6 @@ end
 class Deck
     def initialize 
         @faces = [*(2..10), 'Jack', 'Queen', 'King', 'Ace']
-        @suits = ['clubs', 'spades', 'hearts', 'diamonds']
         @cards = []
 
 #### create deck of cards ####
@@ -38,9 +37,6 @@ class Deck
         value = 11
     else
         value = 10
-    end
-    @suits.each do |suit|
-        @cards << Card.new(value, suit, face) 
     end
 end
 @cards.shuffle!
