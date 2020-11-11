@@ -16,11 +16,9 @@ puts human.bankroll
 puts computer
 
 class Card
-    attr_accessor :value, :suit, :face
+    attr_accessor :value
     def initialize
         @value = value
-        @suit = suit
-        @face = face
     end
 end
 
