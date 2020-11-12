@@ -1,3 +1,7 @@
+puts "what is your name?"
+
+name = gets.chomp
+
 class Player 
     attr_accessor :name, :bankroll, :hand
 
@@ -17,29 +21,30 @@ puts computer
 
 class Card
     attr_accessor :value
-    def initialize
+    def initialize 
         @value = value
     end
+end
 
-    class Deck
-        attr_accessor :cards
-        def initialize 
-            @faces = [*(2..10), 'Jack', 'Queen', 'King', 'Ace']
-            @cards = []
-        end
-#### create deck of cards ####
-        @faces.each do |face|
-            if face.class == Integer
-                value = face
-            elsif face == 'Ace'
-                value = 11
-            else
-                value = 10
-            end
-            @faces.each do |face|
-                @cards << Card.new(face, value)
-            end
-        end
-        @cards.shuffle!
+class Deck
+    attr_accessor :cards, :faces
+    def initialize 
+        @faces = [*(2..10), 'Jack', 'Queen', 'King', 'Ace']
+        @cards = []
     end
-end       
+end
+### create deck of cards ####
+    #     @faces.each do |face|
+    #         if face.class == Integer
+    #             value = face
+    #         elsif face == 'Ace'
+    #             value = 11
+    #         else
+    #             value = 10
+    #         end
+    #         @faces.each do |face|
+    #             @cards << Card.new(face, value)
+    #         end
+    #     end
+    #     @cards.shuffle!
+    # end     
