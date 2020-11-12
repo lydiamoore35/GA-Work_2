@@ -1,11 +1,40 @@
-# require "./classes.rb"
+require "./classes.rb"
 
-# puts "what is your name?"
-# name = gets.chomp
-# Player = COWBOY.new(name)
-# Cleetus = COWBOY.new("Cleetus")
+puts "what is your name?"
+name = gets.chomp
+puts "Do you want to play blackjack?, [y]es or [n]o"
+input = gets.chomp
+if input == "no"
+    puts "Good Bye"
+end
+if input == "yes"
+    puts "Let's begin!"
+end
+
+    
+
+# puts human.name
+# puts human.bankroll
+# puts computer
+Human = Player.new name, 100, []
+Computer = Player.new "Computer", 100000, []
+
+while true do
+    puts "Human's bankroll amount: #{Human.bankroll}" && "Comupter's bankroll amount: #{Computer.bankroll}" > 0
+    puts "Your cards are: "
+    puts Hand
+    value = hand.map(&:value).get_sum
+    puts "Your hand's value is #{value}"
+    if value > 21
+        puts "You lose, sorry!"
+        break
+    end
+    puts "[h]it or [s]tay?"
+    
+end
+
 # while true do
-#     puts "Cleetus's life: #{Cleetus.health} - #{Player.name}'s Life: #{Player.health}"
+#     puts "Humans's bankroll amount: #{human.bankroll} - #{Player.name}'s Life: #{Player.health}"
 #     puts "Cleetus's Acc: #{Cleetus.accuracy} - #{Player.name}'s Acc: #{Player.accuracy}"
 #     puts "do you want to [s]hoot or [r]un?"
 #     input = gets.chomp
