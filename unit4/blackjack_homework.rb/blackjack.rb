@@ -1,9 +1,7 @@
 puts "what is your name?"
-
 name = gets.chomp
 
-Human = Player.new name, 100, []
-Computer = Player.new "Computer", 100000, []
+puts "Do you want to play blackjack?"
 
 class Player 
     attr_accessor :name, :bankroll, :hand
@@ -13,11 +11,14 @@ class Player
         @bankroll = 100
         @hand = []
     end
+    # def get_sum num1, num2
 end
 
 # puts human.name
 # puts human.bankroll
 # puts computer
+Human = Player.new name, 100, []
+Computer = Player.new "Computer", 100000, []
 
 class Card
     attr_accessor :value
@@ -31,6 +32,20 @@ class Deck
     def initialize 
         @faces = [*(2..10), 'Jack', 'Queen', 'King', 'Ace']
         @cards = []
+    end
+    deck = Deck.new
+    hand = deck.draw(2)
+    loop do
+        puts "Your cards are: "
+        puts hand
+        value = hand.map(&:value).get_sum
+        puts "Your hand's value is #{value}"
+        if value > 21
+            puts "You lose, sorry!"
+            break
+        end
+        puts "[h]it or [s]tay?"
+        
     end
 end
 ### create deck of cards ####
