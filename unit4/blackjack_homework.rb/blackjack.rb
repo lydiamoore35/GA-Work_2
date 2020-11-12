@@ -2,6 +2,9 @@ puts "what is your name?"
 
 name = gets.chomp
 
+Human = Player.new name, 100, []
+Computer = Player.new "Computer", 100000, []
+
 class Player 
     attr_accessor :name, :bankroll, :hand
 
@@ -12,12 +15,9 @@ class Player
     end
 end
 
-human = Player.new "Human", 100, []
-computer = Player.new "Computer", 100000, []
-
-puts human.name
-puts human.bankroll
-puts computer
+# puts human.name
+# puts human.bankroll
+# puts computer
 
 class Card
     attr_accessor :value
