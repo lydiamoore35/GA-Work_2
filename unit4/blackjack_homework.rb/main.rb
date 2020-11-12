@@ -2,7 +2,7 @@ require "./classes.rb"
 
 puts "what is your name?"
 name = gets.chomp
-puts "Do you want to play blackjack?, [y]es or [n]o"
+puts "Do you want to play blackjack? [y]es or [n]o"
 input = gets.chomp
 if input == "no"
     puts "Good Bye"
@@ -11,18 +11,11 @@ if input == "yes"
     puts "Let's begin!"
 end
 
-    
-
-# puts human.name
-# puts human.bankroll
-# puts computer
-Human = Player.new name, 100, []
-Computer = Player.new "Computer", 100000, []
 
 while true do
-    puts "Human's bankroll amount: #{Human.bankroll}" && "Comupter's bankroll amount: #{Computer.bankroll}" > 0
+    puts "Your bankroll amount: #{human.bankroll}" && "Comupter's bankroll amount: #{computer.bankroll}" > 0
     puts "Your cards are: "
-    puts Hand
+    puts hand
     value = hand.map(&:value).get_sum
     puts "Your hand's value is #{value}"
     if value > 21
@@ -32,6 +25,13 @@ while true do
     puts "[h]it or [s]tay?"
     
 end
+
+
+# puts human.name
+# puts human.bankroll
+# puts computer
+Human = Player.new name, 100, []
+Computer = Player.new "Computer", 100000, []
 
 # while true do
 #     puts "Humans's bankroll amount: #{human.bankroll} - #{Player.name}'s Life: #{Player.health}"
