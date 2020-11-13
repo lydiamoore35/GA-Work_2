@@ -54,6 +54,7 @@ puts "Do you want to play blackjack? [y]es or [n]o"
 input = gets.chomp
 if input == "no"
     puts "Good Bye"
+    # break
 end
 if input == "yes"
     puts "Let's begin!"
@@ -63,13 +64,18 @@ play_deck = make_deck
 make_deck()
 Human.hand = make_deck.pop(2)
 Computer.hand = make_deck.pop(2)
-puts Human.hand_sum
-puts Computer.hand_sum
+puts "You have #{Human.hand_sum}"
+puts "Your opponent has #{Computer.hand_sum}"
+
+if Human.hand_sum > Computer.hand_sum
+    puts "You WIN with #{Human.hand_sum}!"
+elsif
+    puts "The computer won with #{Computer.hand_sum}. Lame!"
+end
 
 
 
 ###### OLD CODE ######
-
 
 # # puts human.name
 # # puts human.bankroll
