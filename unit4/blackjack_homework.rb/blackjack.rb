@@ -8,8 +8,9 @@ class Player
         @bankroll = 100
         @hand = []
     end
-    # def hand.sum(value)
-    # end
+    def hand_sum
+        @hand[0].value + @hand[1].value
+    end
 end
 
 class Card
@@ -58,12 +59,13 @@ if input == "yes"
     puts "Let's begin!"
 end
 
+play_deck = make_deck
 make_deck()
+Human.hand = make_deck.pop(2)
+Computer.hand = make_deck.pop(2)
+puts Human.hand_sum
+puts Computer.hand_sum
 
-def deal
-    Player.hand = deck.pop(2)
-    puts Player.hand
-end
 
 
 ###### OLD CODE ######
@@ -101,5 +103,9 @@ end
         
 #     end
 # end
+
+
+
+
 
     
