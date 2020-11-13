@@ -74,8 +74,8 @@ elsif Human.hand_sum == Computer.hand_sum
     puts "Tie game!"
 elsif
     puts "The computer wins with #{Computer.hand_sum}. Lame! You have #{Human.bankroll} bankroll left."
-    Computer.bankroll += 10
     Human.bankroll -= 10
+    Computer.bankroll += 10
     puts "The computer has #{Computer.bankroll} bankroll"
 end
 # end
