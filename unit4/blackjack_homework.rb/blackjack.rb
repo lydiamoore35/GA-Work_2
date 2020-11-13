@@ -64,20 +64,23 @@ play_deck = make_deck
 make_deck()
 Human.hand = make_deck.pop(2)
 Computer.hand = make_deck.pop(2)
-puts "You have #{Human.hand_sum}"
+puts "Your cards amount to #{Human.hand_sum}"
 puts "Your opponent has #{Computer.hand_sum}"
 
 if Human.hand_sum > Computer.hand_sum
-    puts "You WIN with #{Human.hand_sum}!"
-   #not sure why bankroll logic is not working???
     Human.bankroll += 10
-    puts Human.bankroll
-# if Human.hand_sum == Computer.hand_sum
-#     puts "Tie game!"
+    puts "You WIN with #{Human.hand_sum}! And you have #{Human.bankroll} bankroll!"
+elsif Human.hand_sum == Computer.hand_sum
+    puts "Tie game!"
 elsif
-    puts "The computer won with #{Computer.hand_sum}. Lame!"
+    puts "The computer wins with #{Computer.hand_sum}. Lame! You have #{Human.bankroll} bankroll left."
+    Computer.bankroll += 10
+    Human.bankroll -= 10
+    puts "The computer has #{Computer.bankroll} bankroll"
 end
 # end
+# game ends after one game according to markdown, but it doesn't like when i add the break but not sure why"
+# break
 
 
 
