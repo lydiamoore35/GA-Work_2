@@ -4,6 +4,7 @@ Human = Player.new "name", 100, []
 Computer = Player.new "Computer", 100000, []
 
 def make_deck
+    deck = []
     @faces = [*(2..10), 'Jack', 'Queen', 'King', 'Ace'].each do |face|
         cards << Card.new(face)
     @cards = []
@@ -25,6 +26,27 @@ if input == "yes"
 end
 
 make_deck()
+
+def generate_deck
+    deck = []
+for j in 1..4
+  for i in 1..13
+    card_value = i
+    if ( i == 1)
+      # the ace card
+      card_value = 11
+    elsif ( i > 10 )
+      # jack, queen, king
+      card_value = 10
+    else
+      # card values are equal to their value when not ace, jack, king, queen
+      card_value = i
+    end
+    deck.push(Card.new(card_value))
+  end
+end
+deck.shuffle!
+end
 
 # while true do
 #     puts "Your bankroll amount: #{Human.bankroll}" && "Computer's bankroll amount: #{Computer.bankroll}" > 0

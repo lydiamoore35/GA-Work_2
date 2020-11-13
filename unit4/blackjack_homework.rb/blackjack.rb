@@ -1,24 +1,72 @@
-# puts "what is your name?"
-# name = gets.chomp
+#### CLASSES ####
 
-# puts "Do you want to play blackjack?"
+class Player 
+    attr_accessor :name, :bankroll, :hand
 
-# class Player 
-#     attr_accessor :name, :bankroll, :hand
+    def initialize name, bankroll, hand 
+        @name = name
+        @bankroll = 100
+        @hand = []
+    end
+    # def hand.sum(value)
+    # end
+end
 
-#     def initialize name, bankroll, hand 
-#         @name = name
-#         @bankroll = 100
-#         @hand = []
-#     end
-#     # def get_sum num1, num2
-# end
+class Card
+    attr_accessor :value
+    def initialize value 
+        @value = value
+    end
+end
+
+Human = Player.new "name", 100, []
+Computer = Player.new "Computer", 100000, []
+
+#### CREATING THE DECK TO PLAY ####
+
+def make_deck 
+    deck = []
+    for j in 1..4
+        for i in 1..13
+          card_value = i
+          if ( i == 1 )
+            # accommodating for the ace card
+            card_value = 11
+          elsif ( i > 10 )
+            # remaining cards: jack, queen, king
+            card_value = 10
+          else
+            # card values are equal to their value when not ace, jack, king, queen
+            card_value = i
+          deck.push(Card.new(card_value))
+        end
+    end
+    end
+    deck.shuffle!
+end
+
+#### GAME LOGIC ####
+
+puts "what is your name?"
+name = gets.chomp
+puts "Do you want to play blackjack? [y]es or [n]o"
+input = gets.chomp
+if input == "no"
+    puts "Good Bye"
+end
+if input == "yes"
+    puts "Let's begin!"
+end
+
+puts make_deck()
+
+
+###### OLD CODE ######
+
 
 # # puts human.name
 # # puts human.bankroll
 # # puts computer
-# Human = Player.new name, 100, []
-# Computer = Player.new "Computer", 100000, []
 
 # class Card
 #     attr_accessor :value
@@ -48,18 +96,5 @@
         
 #     end
 # end
-### create deck of cards ####
-    #     @faces.each do |face|
-    #         if face.class == Integer
-    #             value = face
-    #         elsif face == 'Ace'
-    #             value = 11
-    #         else
-    #             value = 10
-    #         end
-    #         @faces.each do |face|
-    #             @cards << Card.new(face, value)
-    #         end
-    #     end
-    #     @cards.shuffle!
-    # end     
+
+    
