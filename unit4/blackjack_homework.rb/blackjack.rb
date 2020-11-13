@@ -69,9 +69,15 @@ puts "Your opponent has #{Computer.hand_sum}"
 
 if Human.hand_sum > Computer.hand_sum
     puts "You WIN with #{Human.hand_sum}!"
+   #not sure why bankroll logic is not working???
+    Human.bankroll += 10
+    puts Human.bankroll
+# if Human.hand_sum == Computer.hand_sum
+#     puts "Tie game!"
 elsif
     puts "The computer won with #{Computer.hand_sum}. Lame!"
 end
+# end
 
 
 
