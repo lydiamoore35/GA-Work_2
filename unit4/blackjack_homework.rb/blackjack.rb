@@ -58,7 +58,12 @@ if input == "yes"
     puts "Let's begin!"
 end
 
-puts make_deck()
+make_deck()
+
+def deal
+    Player.hand = deck.pop(2)
+    puts Player.hand
+end
 
 
 ###### OLD CODE ######
