@@ -355,3 +355,194 @@ Processing by TweetsController#show as HTML
 Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 5.5ms | Allocations: 4550)
 
 
+Started GET "/" for ::1 at 2020-11-24 20:17:34 -0700
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.4ms | Allocations: 315)
+Completed 200 OK in 18ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 1594)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-11-24 20:17:34 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/tweets" for ::1 at 2020-11-24 20:17:40 -0700
+Processing by TweetsController#create as */*
+  Parameters: {"tweet"=>{"title"=>"\"homework\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}}
+Completed 500 Internal Server Error in 163ms (ActiveRecord: 0.0ms | Allocations: 70577)
+
+
+  
+NameError (undefined local variable or method `tweet_params' for #<TweetsController:0x00007fe2969d6f40>
+Did you mean?  tweet_path):
+  
+app/controllers/tweets_controller.rb:13:in `create'
+Started GET "/tweets" for ::1 at 2020-11-24 20:17:55 -0700
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (1.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:4:in `index'
+Completed 200 OK in 23ms (Views: 6.9ms | ActiveRecord: 15.3ms | Allocations: 4143)
+
+
+Started POST "/tweets" for ::1 at 2020-11-24 20:18:18 -0700
+Processing by TweetsController#create as */*
+  Parameters: {"tweet"=>{"title"=>"\"homework\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}}
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 0.0ms | Allocations: 70172)
+
+
+  
+NameError (undefined local variable or method `tweet_params' for #<TweetsController:0x00007fe2935a1db0>
+Did you mean?  tweet_path):
+  
+app/controllers/tweets_controller.rb:13:in `create'
+Started POST "/tweets" for ::1 at 2020-11-24 20:22:23 -0700
+Processing by TweetsController#create as */*
+  Parameters: {"tweet"=>{"title"=>"\"homework\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}}
+Completed 500 Internal Server Error in 183ms (ActiveRecord: 0.0ms | Allocations: 70171)
+
+
+  
+NameError (undefined local variable or method `tweet_params' for #<TweetsController:0x00007fe293a6f6a8>
+Did you mean?  tweet_path):
+  
+app/controllers/tweets_controller.rb:13:in `create'
+Started POST "/tweets" for ::1 at 2020-11-24 20:24:44 -0700
+Processing by TweetsController#create as */*
+  Parameters: {"tweet"=>{"title"=>"\"homework\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}}
+Completed 500 Internal Server Error in 139ms (ActiveRecord: 0.0ms | Allocations: 70562)
+
+
+  
+NameError (undefined local variable or method `tweet_params' for #<TweetsController:0x00007fe2935ae718>
+Did you mean?  tweet_path):
+  
+app/controllers/tweets_controller.rb:13:in `create'
+Started POST "/tweets" for ::1 at 2020-11-24 20:25:38 -0700
+Processing by TweetsController#create as */*
+  Parameters: {"tweet"=>{"title"=>"\"homework\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}}
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 0.0ms | Allocations: 70169)
+
+
+  
+NameError (undefined local variable or method `tweet_params' for #<TweetsController:0x00007fe293cb7ac8>
+Did you mean?  tweet_path):
+  
+app/controllers/tweets_controller.rb:13:in `create'
+Started POST "/tweets" for ::1 at 2020-11-24 20:30:28 -0700
+Processing by TweetsController#create as */*
+  Parameters: {"tweet"=>{"title"=>"\"homework\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 534)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"tweets"}, missing required keys: [:id]):
+  
+app/controllers/tweets_controller.rb:13:in `create'
+Started POST "/tweets" for ::1 at 2020-11-24 20:31:02 -0700
+Processing by TweetsController#create as */*
+  Parameters: {"tweet"=>{"title"=>"\"homework\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}}
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 0.0ms | Allocations: 70557)
+
+
+  
+NameError (undefined local variable or method `tweet_params' for #<TweetsController:0x00007fe29713af20>
+Did you mean?  tweet_path):
+  
+app/controllers/tweets_controller.rb:13:in `create'
+Started POST "/tweets" for ::1 at 2020-11-24 20:31:23 -0700
+Processing by TweetsController#create as */*
+  Parameters: {"tweet"=>{"title"=>"\"homework\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 536)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"tweets"}, missing required keys: [:id]):
+  
+app/controllers/tweets_controller.rb:13:in `create'
+Started POST "/tweets" for ::1 at 2020-11-24 20:31:48 -0700
+Processing by TweetsController#create as */*
+  Parameters: {"tweet"=>{"title"=>"\"homework\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+  [1m[36mTweet Create (4.4ms)[0m  [1m[32mINSERT INTO "tweets" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+Completed 200 OK in 34ms (Views: 0.4ms | ActiveRecord: 11.5ms | Allocations: 5578)
+
+
+Started POST "/tweets" for ::1 at 2020-11-24 21:22:40 -0700
+Processing by TweetsController#create as */*
+  Parameters: {"tweet"=>{"title"=>"\"homework\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+  [1m[36mTweet Create (4.9ms)[0m  [1m[32mINSERT INTO "tweets" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+Completed 200 OK in 24ms (Views: 1.1ms | ActiveRecord: 6.4ms | Allocations: 2275)
+
+
+Started GET "/tweets" for ::1 at 2020-11-24 21:23:01 -0700
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.6ms | Allocations: 1301)
+
+
+Started POST "/tweets" for ::1 at 2020-11-24 21:28:18 -0700
+Processing by TweetsController#create as */*
+  Parameters: {"tweet"=>{"title"=>"\"homework\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}}
+Completed 500 Internal Server Error in 258ms (ActiveRecord: 0.0ms | Allocations: 70421)
+
+
+  
+NameError (undefined local variable or method `params_' for #<TweetsController:0x00007fe293ec50b8>
+Did you mean?  params
+               params=):
+  
+app/controllers/tweets_controller.rb:13:in `create'
+Started POST "/tweets" for ::1 at 2020-11-24 21:28:55 -0700
+Processing by TweetsController#create as */*
+  Parameters: {"tweet"=>{"title"=>"\"homework\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}}
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 0.0ms | Allocations: 70436)
+
+
+  
+NameError (undefined local variable or method `params_tweet' for #<TweetsController:0x00007fe293d5c410>
+Did you mean?  params=):
+  
+app/controllers/tweets_controller.rb:13:in `create'
+Started POST "/tweets" for ::1 at 2020-11-24 21:29:11 -0700
+Processing by TweetsController#create as */*
+  Parameters: {"tweet"=>{"title"=>"\"homework\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}}
+Completed 500 Internal Server Error in 129ms (ActiveRecord: 0.0ms | Allocations: 70435)
+
+
+  
+NameError (undefined local variable or method `params_tweets' for #<TweetsController:0x00007fe2971a1860>):
+  
+app/controllers/tweets_controller.rb:13:in `create'
