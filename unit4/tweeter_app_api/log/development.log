@@ -546,3 +546,201 @@ Completed 500 Internal Server Error in 129ms (ActiveRecord: 0.0ms | Allocations:
 NameError (undefined local variable or method `params_tweets' for #<TweetsController:0x00007fe2971a1860>):
   
 app/controllers/tweets_controller.rb:13:in `create'
+Started POST "/tweets" for ::1 at 2020-11-25 14:15:19 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#create as */*
+  Parameters: {"tweet"=>{"title"=>"\"homework\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+  [1m[36mTweet Create (4.6ms)[0m  [1m[32mINSERT INTO "tweets" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+Completed 200 OK in 29ms (Views: 0.4ms | ActiveRecord: 18.6ms | Allocations: 5673)
+
+
+Started POST "/tweets" for ::1 at 2020-11-25 14:27:28 -0700
+Processing by TweetsController#create as */*
+  Parameters: {"tweet"=>{"title"=>"\"homework\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+  [1m[36mTweet Create (2.6ms)[0m  [1m[32mINSERT INTO "tweets" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+Completed 200 OK in 17ms (Views: 0.5ms | ActiveRecord: 3.6ms | Allocations: 5041)
+
+
+Started POST "/tweets" for ::1 at 2020-11-25 14:28:09 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#create as */*
+  Parameters: {"tweet"=>{"title"=>"\"homework\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+Completed 200 OK in 19ms (Views: 0.5ms | ActiveRecord: 5.3ms | Allocations: 5674)
+
+
+Started POST "/tweets" for ::1 at 2020-11-25 14:28:21 -0700
+Processing by TweetsController#create as */*
+  Parameters: {"tweet"=>{"title"=>"\"homework\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 3.2ms | Allocations: 5198)
+
+
+Started POST "/tweets" for ::1 at 2020-11-25 14:30:09 -0700
+Processing by TweetsController#create as */*
+  Parameters: {"tweet"=>{"title"=>"\"homework\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+  [1m[36mTweet Create (1.4ms)[0m  [1m[32mINSERT INTO "tweets" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+Completed 200 OK in 32ms (Views: 0.4ms | ActiveRecord: 11.6ms | Allocations: 5161)
+
+
+Started POST "/tweets" for ::1 at 2020-11-25 14:30:46 -0700
+Processing by TweetsController#create as */*
+  Parameters: {"tweet"=>{"title"=>"\"homework\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+Completed 200 OK in 44ms (Views: 0.2ms | ActiveRecord: 6.0ms | Allocations: 5146)
+
+
+Started POST "/tweets" for ::1 at 2020-11-25 14:31:43 -0700
+Processing by TweetsController#create as */*
+  Parameters: {"tweet"=>{"title"=>"\"homework\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+  [1m[36mTweet Create (0.2ms)[0m  [1m[32mINSERT INTO "tweets" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 4.5ms | Allocations: 5177)
+
+
+Started POST "/tweets" for ::1 at 2020-11-25 14:31:44 -0700
+Processing by TweetsController#create as */*
+  Parameters: {"tweet"=>{"title"=>"\"homework\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 2272)
+
+
+Started POST "/tweets" for ::1 at 2020-11-25 14:31:58 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#create as */*
+  Parameters: {"tweet"=>{"title"=>"\"homework\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+  [1m[36mTweet Create (1.6ms)[0m  [1m[32mINSERT INTO "tweets" DEFAULT VALUES RETURNING "id"[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+Completed 200 OK in 71ms (Views: 9.6ms | ActiveRecord: 7.3ms | Allocations: 5676)
+
+
+Started PUT "/tweets/3" for ::1 at 2020-11-25 14:41:26 -0700
+Processing by TweetsController#update as */*
+  Parameters: {"tweet"=>{"title"=>"\"homework\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}, "id"=>"3"}
+  [1m[36mTweet Load (0.8ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:23:in `update'
+Completed 500 Internal Server Error in 154ms (ActiveRecord: 1.0ms | Allocations: 74110)
+
+
+  
+NameError (undefined local variable or method `tweet_params' for #<TweetsController:0x00007fd2edbd1a10>
+Did you mean?  tweet_path):
+  
+app/controllers/tweets_controller.rb:24:in `update'
+Started PUT "/tweets/3" for ::1 at 2020-11-25 14:42:57 -0700
+Processing by TweetsController#update as */*
+  Parameters: {"tweet"=>{"title"=>"\"wahoo\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}, "id"=>"3"}
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:23:in `update'
+Completed 500 Internal Server Error in 169ms (ActiveRecord: 0.6ms | Allocations: 70807)
+
+
+  
+NameError (undefined local variable or method `tweet_params' for #<TweetsController:0x00007fd2edb43fa8>
+Did you mean?  tweet_path):
+  
+app/controllers/tweets_controller.rb:24:in `update'
+Started PUT "/tweets/3" for ::1 at 2020-11-25 14:48:36 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#update as */*
+  Parameters: {"tweet"=>{"title"=>"\"wahoo\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}, "id"=>"3"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:23:in `update'
+Completed 500 Internal Server Error in 148ms (ActiveRecord: 6.2ms | Allocations: 74543)
+
+
+  
+NameError (undefined local variable or method `tweet_params' for #<TweetsController:0x00007ff42b47de80>
+Did you mean?  tweet_path):
+  
+app/controllers/tweets_controller.rb:24:in `update'
+Started PUT "/tweets/3" for ::1 at 2020-11-25 14:49:29 -0700
+Processing by TweetsController#update as */*
+  Parameters: {"tweet"=>{"title"=>"\"wahoo\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}, "id"=>"3"}
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:23:in `update'
+Completed 500 Internal Server Error in 145ms (ActiveRecord: 3.7ms | Allocations: 73872)
+
+
+  
+NameError (undefined local variable or method `tweet_params' for #<TweetsController:0x00007ff42621be30>
+Did you mean?  tweet_path):
+  
+app/controllers/tweets_controller.rb:24:in `update'
+Started PUT "/tweets/3" for ::1 at 2020-11-25 14:53:36 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#update as */*
+  Parameters: {"tweet"=>{"title"=>"\"wahoo\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}, "id"=>"3"}
+  [1m[36mTweet Load (0.8ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:23:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:24:in `update'
+  [1m[36mTweet Update (4.4ms)[0m  [1m[33mUPDATE "tweets" SET "title" = $1, "author" = $2, "content" = $3 WHERE "tweets"."id" = $4[0m  [["title", "\"wahoo\""], ["author", "\"me\""], ["content", "\"homework is so awesome\""], ["id", 3]]
+  ↳ app/controllers/tweets_controller.rb:24:in `update'
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:24:in `update'
+Completed 200 OK in 71ms (Views: 0.5ms | ActiveRecord: 14.1ms | Allocations: 6966)
+
+
+Started POST "/tweets" for ::1 at 2020-11-25 14:55:14 -0700
+Processing by TweetsController#create as */*
+  Parameters: {"tweet"=>{"title"=>"\"hey this works wahoo\"", "author"=>"\"me\"", "content"=>"\"homework is so awesome\""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "\"hey this works wahoo\""], ["content", "\"homework is so awesome\""], ["author", "\"me\""]]
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:15:in `create'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 1.3ms | Allocations: 2478)
+
+
+Started GET "/tweets" for ::1 at 2020-11-25 14:55:20 -0700
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 1896)
+
+

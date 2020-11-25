@@ -10,19 +10,26 @@ class TweetsController < ApplicationController
     end
 
     def create
-        tweet = Tweet.new(params[:id])
+        tweet = Tweet.new(tweet_params)
 
     if tweet.save
-        render json:{tweet: tweet}
+        render(json:{tweet: tweet})
     else
         render(status: 422, json: { tweet: tweet, errors: tweet.errors})
     end
     end
 
+    def update
+        tweet = Tweet.find(params[:id])
+        tweet.update(tweet_params)
+        render(status: 200, json: {tweet: tweet})
+    end
+
+    private
+
+    def tweet_params
+        params.required(:tweet).permit(:title, :author, :content)
+    end
+
 end
 
-private
-
-def item_params
-  params.require(:item).permit(:name, :price)
-end
